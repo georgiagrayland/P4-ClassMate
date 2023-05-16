@@ -69,7 +69,7 @@ class Comment(models.Model):
     """
     Model for discussion section on each school page 
     """
-    post = models.ForeignKey(
+    school = models.ForeignKey(
         School, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -81,5 +81,5 @@ class Comment(models.Model):
         ordering = ['-created_on']
 
         def __str__(self):
-            return f"Comment {self.body} wrriten by {self.name}"
+            return f"Review {self.body} wrriten by {self.name}"
 
