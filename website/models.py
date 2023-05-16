@@ -48,4 +48,27 @@ class School(models.Model):
         ordering = ['-name']
 
     def __str__(self):
-        return self.title
+        return self.name
+
+    def school_location(self):
+        return self.region
+
+
+class Comment(models.Model):
+    """
+    Model for discussion section on each school page 
+    """
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-created_on']
+
+        def __str__(self):
+            return f"Comment {self.body} wrriten by {self.name}"
+
