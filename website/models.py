@@ -3,22 +3,22 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 region_options = (
-    ("London & SE"),
-    ("Manchester & NE"),
-    ("Bristol & SW"),
-    ("Newcastle & NE"),
+    ("London", "London"),
+    ("Manchester", "Manchester"),
+    ("Bristol", "Bristol"),
+    ("Newcastle", "Newcastle"),
 )
 
 status_options = (
-    ("Fee-paying"),
-    ("State Grammar"),
-    ("Academy"),
+    ("Fee-paying", "Fee-paying"),
+    ("State Grammar", "State Grammar"),
+    ("Academy", "Academy"),
 )
 
 gender_options = (
-    ("Co-educational"),
-    ("Girls"),
-    ("Boys"),
+    ("Co-educational", "Co-educational"),
+    ("Girls", "Girls"),
+    ("Boys", "Boys"),
 )
 
 
@@ -34,13 +34,13 @@ class School(models.Model):
     region = models.CharField(max_length=200, choices=region_options)
     status = models.CharField(max_length=200, choices=status_options)
     gender_type = models.CharField(max_length=200, choices=gender_options)
-    class_size = models.IntegerField(max_length=3)
-    avg_maths_grade = models.IntegerField(max_length=2)
-    avg_english_grade = models.IntegerField(max_length=2)
-    percentage_gcse_5 = models.IntegerField(max_length=10)
-    featured_image = models.CloudinaryField('image', default='placeholder')
+    class_size = models.IntegerField()
+    avg_maths_grade = models.IntegerField()
+    avg_english_grade = models.IntegerField()
+    percentage_gcse_5 = models.IntegerField()
+    featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
-    specialisation = models.CharField()
+    specialisation = models.CharField(max_length=200)
     description = models.TextField()
     featured = models.BooleanField(default=False)
 
