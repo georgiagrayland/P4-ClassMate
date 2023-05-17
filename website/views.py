@@ -4,11 +4,16 @@ from django.views import View
 from .models import School
 
 
-def index(request):
-    """
-    Returns the Homepage
-    """
-    return render(request, 'index.html')
+# def index(request):
+   # """
+    #Returns the Homepage
+  #  """
+   # return render(request, 'index.html')
+
+
+class Home(generic.TemplateView):
+    model = School
+    template_name = 'index.html'
 
 
 class SchoolsList(generic.ListView):
