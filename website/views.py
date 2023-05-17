@@ -18,7 +18,7 @@ class SchoolsList(generic.ListView):
 class SchoolDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = School.objectsq
+        queryset = School.objects
         school = get_object_or_404(queryset, slug=slug)
         comments = School.comments.filter(approved=True).order_by('created_on')
         rated = False
