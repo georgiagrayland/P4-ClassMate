@@ -53,6 +53,8 @@ class School(models.Model):
     excerpt = models.TextField(blank=True)
     specialisation = models.CharField(max_length=200)
     description = models.TextField()
+    rating = models.ManyToManyField(
+        User, related_name='school_rating', blank=True)
     featured = models.BooleanField(default=False)
 
     class Meta:
