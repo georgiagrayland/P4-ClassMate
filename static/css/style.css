@@ -9,7 +9,9 @@ nav{
 }
 
 .navbar-brand{
-    font-size: 1.8rem;
+    font-family: Merriweather, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
 }
 
 .navbar-brand:hover{
@@ -20,8 +22,9 @@ nav{
     color: #FDFFFC;
 }
 
-.navbar-brand, .h4{
+.h4{
     font-family: Merriweather, sans-serif;
+    letter-spacing: 1.5px;
 }
 
 .navbar-nav a:hover{
