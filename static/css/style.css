@@ -52,8 +52,8 @@ footer i:hover{
 /* --------------------- Homepage --------------------- */
 
 
-.jumbotron {
-    background: url('') no-repeat;
+.page-heading {
+    background: url('/media/background-image.jpg') no-repeat;
     background-size: cover;
     height: 50vh;
     color: #e1e2e7;
