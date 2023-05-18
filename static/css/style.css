@@ -2,6 +2,8 @@ body{
     background-color: #FDF0D5;
 }
 
+
+/* --------------------- Nav Bar --------------------- */
 nav{
     background-color: #780000;
 }
@@ -26,11 +28,13 @@ nav{
     color: #F1D302;
 }
 
+/* --------------------- General body --------------------- */
 
 body{
     font-family: Assistant, sans-serif;
 }
 
+/* --------------------- Footer --------------------- */
 footer{
     background-color: #780000;
 }
@@ -42,4 +46,15 @@ footer i{
 
 footer i:hover{
     color: #F1D302;
+}
+
+
+/* --------------------- Homepage --------------------- */
+
+
+.jumbotron {
+    background: url('') no-repeat;
+    background-size: cover;
+    height: 50vh;
+    color: #e1e2e7;
 }
