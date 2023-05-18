@@ -22,6 +22,11 @@ nav{
     font-family: Merriweather, sans-serif;
 }
 
+.navbar-nav a:hover{
+    color: #F1D302;
+}
+
+
 body{
     font-family: Assistant, sans-serif;
 }
