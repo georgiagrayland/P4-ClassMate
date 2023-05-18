@@ -3,9 +3,21 @@ body{
 }
 
 nav{
-    background-color: #C1121F;
+    background-color: #780000;
 }
 
 .navbar-brand, .nav-link{
     color: #FDFFFC;
+}
+
+footer{
+    background-color: #780000;
+}
+
+footer i{
+    font-size: 25px;
+}
+
+footer i:hover{
+    color: #F1D302;
 }
