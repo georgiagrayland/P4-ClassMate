@@ -6,8 +6,24 @@ nav{
     background-color: #780000;
 }
 
+.navbar-brand{
+    font-size: 1.8rem;
+}
+
+.navbar-brand:hover{
+    color: #F1D302;
+}
+
 .navbar-brand, .nav-link{
     color: #FDFFFC;
+}
+
+.navbar-brand, .h4{
+    font-family: Merriweather, sans-serif;
+}
+
+body{
+    font-family: Assistant, sans-serif;
 }
 
 footer{
