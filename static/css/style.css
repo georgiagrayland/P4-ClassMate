@@ -58,10 +58,12 @@ footer i:hover{
 .welcome-text{
     font-size: 1.5rem;
 }
-/* --------------------- Homepage --------------------- */
+
+/* --------------------- Homepage --------------------- 
 
 .main-image {
-    background: url('../media/leaf-image.jpg');
+    background: url('/media/leaf-image.jpg');
     background-size: cover;
-    height: 30vh;
+    height: 40vh;
 }
+*/
