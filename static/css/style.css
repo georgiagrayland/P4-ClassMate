@@ -51,12 +51,17 @@ footer i:hover{
     color: #F1D302;
 }
 
+.welcome, .welcome-text{
+    color:#780000;
+}
 
-/* --------------------- Homepage --------------------- 
+.welcome-text{
+    font-size: 1.5rem;
+}
+/* --------------------- Homepage --------------------- */
 
-.bg-image {
-    background-image: url('/media/background-image.jpg');
+.main-image {
+    background: url('../media/leaf-image.jpg');
     background-size: cover;
     height: 30vh;
 }
-*/
