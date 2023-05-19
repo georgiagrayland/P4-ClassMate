@@ -23,8 +23,14 @@ nav{
 }
 
 .h4{
+    color: #F1D302;
     font-family: Merriweather, sans-serif;
     letter-spacing: 1.5px;
+    margin-bottom: 30px;
+}
+
+footer p{
+    margin-bottom: 30px;
 }
 
 .navbar-nav a:hover{
@@ -62,7 +68,7 @@ footer i:hover{
 /* --------------------- Homepage --------------------- */
 
 .main-image {
-    background: url('../media/leaf-image.jpg') no-repeat;
+    background: url('../media/background-image.jpg') no-repeat;
     background-size: cover;
-    height: 40vh;
+    height: 60vh;
 }
