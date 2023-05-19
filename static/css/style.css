@@ -9,16 +9,17 @@ nav{
 }
 
 .navbar-brand{
+    color: #F1D302;
     font-family: Merriweather, sans-serif;
     font-size: 2rem;
     letter-spacing: 1.5px;
 }
 
 .navbar-brand:hover{
-    color: #F1D302;
+    color: white;
 }
 
-.navbar-brand, .nav-link{
+.nav-link{
     color: #FDFFFC;
 }
 
