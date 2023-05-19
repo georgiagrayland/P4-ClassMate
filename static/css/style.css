@@ -1,7 +1,7 @@
+
 body{
     background-color: #FDF0D5;
 }
-
 
 /* --------------------- Nav Bar --------------------- */
 nav{
@@ -52,12 +52,11 @@ footer i:hover{
 }
 
 
-/* --------------------- Homepage --------------------- */
+/* --------------------- Homepage --------------------- 
 
-
-.page-heading {
-    background: url('/media/background-image.jpg') no-repeat;
+.bg-image {
+    background-image: url('/media/background-image.jpg');
     background-size: cover;
-    height: 50vh;
-    color: #e1e2e7;
+    height: 30vh;
 }
+*/
