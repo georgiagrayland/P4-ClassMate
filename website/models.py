@@ -22,16 +22,6 @@ gender_options = (
     ("Boys", "Boys"),
 )
 
-grade_options = (
-    ("3", "3"),
-    ("4", "4"),
-    ("5", "5"),
-    ("6", "6"),
-    ("7", "7"),
-    ("8", "8"),
-    ("9", "9"),
-)
-
 
 # Create your models here.
 class School(models.Model):
@@ -46,8 +36,8 @@ class School(models.Model):
     status = models.CharField(max_length=200, choices=status_options)
     gender_type = models.CharField(max_length=200, choices=gender_options)
     class_size = models.IntegerField(validators=[MaxValueValidator(40)])
-    avg_gcse_maths_grade = models.IntegerField(choices=grade_options)
-    avg_gcse_english_grade = models.IntegerField(choices=grade_options)
+    avg_gcse_maths_grade = models.IntegerField()
+    avg_gcse_english_grade = models.IntegerField()
     percentage_gcse_5_above = models.IntegerField()
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
