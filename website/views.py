@@ -11,7 +11,7 @@ class Home(generic.TemplateView):
 
 class SchoolsList(generic.ListView):
     model = School
-    queryset = School.objects.order_by('percentage_gcse_5_above')
+    # queryset = School.objects.order_by('percentage_gcse_5_above')
     template_name = 'schools.html'
 
 
