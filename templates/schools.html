@@ -14,7 +14,32 @@
     </div>
     </header>
 
-    <!-- Add bootsrap cards for each school (for loop)
-     one row per school - 60-80% of screen-->
+    <!-- Add bootstrap cards for each school (for loop)
+     one row per school - 60-80% of screen-->  
+     <div class="container-fluid">
+     <div class="row">
+        {% for school in schools %}
+        <!--Individual Schools Cards-->
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="your-image.jpg" class="card-img" alt="Image">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card Title</h5>
+                    <p class="card-text">Card content goes here.</p>
+                    <!-- Additional card content -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+         {% endfor %}   
+        </div>
+     </div>
+    </div>
 
 {% endblock %}
+
+
