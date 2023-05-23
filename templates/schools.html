@@ -33,8 +33,11 @@
                 <div class="col-md-6">
                   <div class="card-body">
                   <a href="{% url 'school_detail' school.slug %}" class="school-link">
-                    <h5 class="card-title">{{ school.name }}</h5>
+                    <h4 class="card-title">{{ school.name }}</h4>
                   </a> 
+                  <h6 class="icons-info">
+                  <i class="fa-solid fa-location-dot"></i>{{ school.region }}
+                  </h6>
                     <p class="card-text">{{ school.excerpt }}</p>
                     <!-- Additional card content -->
                   </div>
