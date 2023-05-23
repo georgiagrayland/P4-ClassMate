@@ -58,6 +58,7 @@ footer i:hover{
     color: #F1D302;
 }
 
+/* --------------------- Homepage --------------------- */
 .welcome, .welcome-text{
     color:#780000;
 }
@@ -66,14 +67,13 @@ footer i:hover{
     font-size: 1.5rem;
 }
 
-/* --------------------- Homepage --------------------- */
-
 .main-image {
     background: url('../media/background-image.jpg') no-repeat;
     background-size: cover;
     height: 60vh;
 }
 
+/* --------------------- Schools List Page  --------------------- */
 
 .school-page{
     background: url(../media/boy-book.jpg);
