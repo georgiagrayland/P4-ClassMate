@@ -23,7 +23,7 @@ def schools_list(request):
         'total_number_of_schools': total_number_of_schools,
     }
 
-    return render(request, 'templates/schools.html', context)
+    return render(request, 'schools.html', context)
 
 
 class SchoolDetail(View):
