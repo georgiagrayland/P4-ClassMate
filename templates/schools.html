@@ -14,8 +14,10 @@
     </div>
     </header>
 
-    <!-- Add bootstrap cards for each school (for loop)
-     one row per school - 60-80% of screen-->  
+
+    <!-- Add filtering tool here -->  
+
+    <!--Cards to display all schools on a page -->  
      <div class="container-fluid">
      <div class="row">
         {% for school in schools %}
@@ -41,7 +43,7 @@
                   <i class="fa-solid fa-venus-mars"></i>{{ school.gender_type }}
                   </h6>
                     <p class="card-text">{{ school.excerpt }}</p>
-                    <!-- Additional card content -->
+                    <!-- Additional information -->
                     <p class="card-text specialisation"><strong>Specialises in:</strong> {{ school.specialisation }}</p>
                     <p class="card-text specialisation"><strong>Average class size:</strong> {{ school.class_size }}</p>
                   </div>
