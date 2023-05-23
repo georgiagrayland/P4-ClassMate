@@ -85,3 +85,11 @@ footer i:hover{
     font-size: 3.5rem;
     color: #003049;
 }
+
+h6 i{
+    padding-right: 10px;
+}
+
+.specialisation{
+    font-weight: bolder;
+}

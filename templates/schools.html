@@ -36,10 +36,13 @@
                     <h4 class="card-title">{{ school.name }}</h4>
                   </a> 
                   <h6 class="icons-info">
-                  <i class="fa-solid fa-location-dot"></i>{{ school.region }}
+                  <i class="fa-solid fa-location-dot"></i>{{ school.region }}<br>
+                  <i class="fa-solid fa-school"></i>{{ school.status }}<br>
+                  <i class="fa-solid fa-venus-mars"></i>{{ school.gender_type }}
                   </h6>
                     <p class="card-text">{{ school.excerpt }}</p>
                     <!-- Additional card content -->
+                    <p class="card-text specialisation"><strong>Specialises in:</strong> {{ school.specialisation }}</p>
                   </div>
                 </div>
               </div>
