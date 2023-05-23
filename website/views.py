@@ -26,6 +26,22 @@ def schools_list(request):
     return render(request, 'schools.html', context)
 
 
+def school_detail(request, slug):
+    """
+    View that shows each school on an individual page
+    """
+    school = get_object_or_404(School, pk=slug)
+    # comments = School.comments.filter(approved=True).order_by('created_on)
+
+    context = {
+        'school': school,
+        # 'comment': comment,
+    }
+
+    return render(request, 'school_detail.html', context)
+
+
+"""
 class SchoolDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -37,3 +53,5 @@ class SchoolDetail(View):
         #    rated = True
 
         return render(request, 'school_detail.html')
+"""
+
