@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.views import View
+from django.http import HttpResponse
 from .models import School
 
 
@@ -9,10 +10,20 @@ class Home(generic.TemplateView):
     template_name = 'index.html'
 
 
-class SchoolsList(generic.ListView):
-    model = School
-    # queryset = School.objects.order_by('percentage_gcse_5_above')
-    template_name = 'schools.html'
+# Put in filerting tool if time
+def schools_list(request):
+    """
+    A view that displays all schools for users to browse
+    """
+    schools = School.objects.all()
+    total_number_of_schools = schools.count()
+
+    context = {
+        'schools': schools,
+        'total_number_of_schools': total_number_of_schools,
+    }
+
+    return render(request, 'templates/schools.html', context)
 
 
 class SchoolDetail(View):
