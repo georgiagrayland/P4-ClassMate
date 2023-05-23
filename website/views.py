@@ -26,32 +26,42 @@ def schools_list(request):
     return render(request, 'schools.html', context)
 
 
-def school_detail(request, slug):
-    """
-    View that shows each school on an individual page
-    """
-    school = get_object_or_404(School, pk=slug)
-    # comments = School.comments.filter(approved=True).order_by('created_on)
-
-    context = {
-        'school': school,
-        # 'comment': comment,
-    }
-
-    return render(request, 'school_detail.html', context)
-
-
-"""
 class SchoolDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = School.objects
+        """
+        View that shows each school on an individual page
+        """
+        queryset = School.objects.all()
         school = get_object_or_404(queryset, slug=slug)
-        # comments = School.comments.filter(approved=True).order_by('created_on')
-        rated = False
-        #if school.rating.filter(id=self.request.user.id).exists():
-        #    rated = True
+        # comments = School.comments.filter(approved=True).order_by('created_on)
 
-        return render(request, 'school_detail.html')
-"""
+        return render(
+            request,
+            "school_detail.html",
+            {
+                'school': school,
+                # 'comment': comment,
+                # 'commented': False,
+                # 'comment_form': CommentForm()
+            },
+        )
 
+    def school(self, request, slug, *args, **kwargs):
+
+        queryset = School.objects.all()
+        school = get_object_or_404(queryset, slug=slug)
+        # comments = School.comments.filter(approved=True).order_by('-created_on)
+        # liked = false 
+        # if post.likes.filter(id=self.request.user.id).exists():
+        # liked = True
+
+    # Enter part for comment form
+
+        return render(
+            request,
+            "school_detail.html",
+            {
+                'school': school,
+            },
+        )
