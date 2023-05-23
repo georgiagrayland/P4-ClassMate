@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!--Each page for a school id - all info in Django admin backend-->
 
+    <h2>
+        {{ school.name }}
+    </h2>
+    <p>
+        {{ school.description }}
+    </p>
 {% endblock %}
