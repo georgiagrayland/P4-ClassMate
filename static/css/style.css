@@ -76,6 +76,12 @@ footer i:hover{
 
 
 .school-page{
-    background: url();
-    height: 40vh;
+    background: url(../media/boy-book.jpg);
+    background-size: cover;
+    height: 80vh;
+}
+
+.schools-list{
+    font-size: 3.5rem;
+    color: #003049;
 }
