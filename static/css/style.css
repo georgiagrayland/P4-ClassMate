@@ -93,3 +93,15 @@ h6 i{
 .specialisation{
     font-weight: bolder;
 }
+
+
+/* --------------------- School Detail Page --------------------- */
+
+.key-numbers{
+    text-decoration: underline;
+}
+
+.school-name{
+    font-family: Merriweather, sans-serif;
+    color: #235789;
+}
