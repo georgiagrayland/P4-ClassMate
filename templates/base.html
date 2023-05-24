@@ -45,9 +45,18 @@
                       <li><a class="dropdown-item" href="#">North West</a></li>
                     </ul>
                   </li>
-                    <div class="navbar-right"></div>
-                    <a class="btn btn-outline-light navbar-right" href="#">Login/Signup</a>
-                  </div>
+                  {% if user.is_authenticated %}
+                    <div class="navbar-right">
+                    <a class="btn btn-outline-light nav-item" href="{% url 'account_logout' %}">Logout</a>
+                    </div>
+                  {% else %} 
+                    <div class="navbar-right">
+                    <a class="btn btn-outline-light nav-item" href="{% url 'account_signup' %}">Sign Up</a>
+                    </div>
+                    <div class="navbar-right">
+                      <a class="btn btn-outline-light nav-item" href="{% url 'account_login' %}">Log In</a>
+                      </div>
+                    {% endif %}
                 </div>
               </div>
             </div>
