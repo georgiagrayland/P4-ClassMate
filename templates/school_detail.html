@@ -12,25 +12,43 @@
     <a onclick="history.back()" aria-label="back to previous page"> <i class="fa-solid fa-arrow-left"></i> Back to Schools</a>
 </span>
 
+<!--School main info -->
+<div class="container">
     <div class="card">
-        <div class="row mb-lg-4">
+        <div class="row mg-lg-4">
             <div class="col-12 col-lg-8">
-                <!--image for each school to the left of the card -->
-                    <div class="image-container">
-                      {% if "placeholder" in school.featured_image.url %}
-                      <img src="../static/media/placeholder.jpg" class="card-img" alt="Placeholder general school image">
-                      {% else %}
-                      <img src="{{ school.featured_image.url }}" class="card-img" alt="{{ school.name }}">
-                      {% endif %} 
-                    </div>
-            <!-- Key Info -->
+                <div class="image-container">
+                    {% if "placeholder" in school.featured_image.url %}
+                    <img src="../static/media/placeholder.jpg" class="card-img" alt="Placeholder general school image">
+                    {% else %}
+                    <img src="{{ school.featured_image.url }}" class="card-img" alt="{{ school.name }}">
+                    {% endif %} 
+                  </div>
+                <div class="col-12 col-lg-4 pt-lg-4">
+                <div class="card-body">
+                    <h4>{{ school.name }}</h4>
+                </div> 
+                <h5><i class="fa-solid fa-location-dot p-1"></i> {{ school.region }}</h5>
+                <h5><i class="fa-solid fa-venus-mars p-1"></i> {{ school.gender_type }}</h5>
+                <h5><i class="fa-solid fa-coins p-1"></i> {{ school.status }}</h5>
+                <h5><i class="fa-solid fa-book-open p-1"></i> {{ school.specialisation }}</h5>
+            </div>
+        </div>
+        <hr>
+        <!--School description -->
+        <div class="card-body">
+            <div class="row p-2 mb-4">
+                <div class="col-12">
+                    <p>{{ school.description | safe }}</p>
             </div>
         </div>
     </div>
-
-    <!-- Main description -->
+</div>
+</div>
+</div>
 
 
 <!--  Comment form --> 
 
 {% endblock %}
+
