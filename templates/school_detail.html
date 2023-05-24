@@ -14,7 +14,8 @@
 
     <div class="card">
         <div class="row mb-lg-4">
-            <div class="col-10 col-lg-8">
+            <div class="col-12 col-lg-8">
+                <!--image for each school to the left of the card -->
                     <div class="image-container">
                       {% if "placeholder" in school.featured_image.url %}
                       <img src="../static/media/placeholder.jpg" class="card-img" alt="Placeholder general school image">
@@ -22,19 +23,14 @@
                       <img src="{{ school.featured_image.url }}" class="card-img" alt="{{ school.name }}">
                       {% endif %} 
                     </div>
+            <!-- Key Info -->
             </div>
         </div>
     </div>
 
+    <!-- Main description -->
 
-<!-- A school will be displayed on a card per page - add card here 
 
-    <h2>
-        {{ school.name }}
-    </h2>
-    <p>
-        {{ school.description }}
-    </p>-->
+<!--  Comment form --> 
 
-<!-- Add comment form here  -->
 {% endblock %}
