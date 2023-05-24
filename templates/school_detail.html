@@ -2,21 +2,39 @@
 
 {% block content %}
 
+{% load static %} 
+
 <!-- Give users a prompt to add a comment/look at comments  -->
 
-<!-- Add JS Animation -->
 <!-- Add JS on click to go back to previous page on this button -->
-<a class="link" href="#"><button type="button" class="btn btn-dark btn-sm">Back to All Schools</button></a>
+
+<span class="btn btn-dark btn-sm">
+    <a onclick="history.back()" aria-label="back to previous page"> <i class="fa-solid fa-arrow-left"></i> Back to Schools</a>
+</span>
+
+    <div class="card">
+        <div class="row mb-lg-4">
+            <div class="col-10 col-lg-8">
+                    <div class="image-container">
+                      {% if "placeholder" in school.featured_image.url %}
+                      <img src="../static/media/placeholder.jpg" class="card-img" alt="Placeholder general school image">
+                      {% else %}
+                      <img src="{{ school.featured_image.url }}" class="card-img" alt="{{ school.name }}">
+                      {% endif %} 
+                    </div>
+            </div>
+        </div>
+    </div>
 
 
-<!-- A school will be displayed on a card per page - add card here -->
+<!-- A school will be displayed on a card per page - add card here 
 
     <h2>
         {{ school.name }}
     </h2>
     <p>
         {{ school.description }}
-    </p>
+    </p>-->
 
 <!-- Add comment form here  -->
 {% endblock %}
