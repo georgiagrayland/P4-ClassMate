@@ -57,7 +57,7 @@ class School(models.Model):
 
 class Comment(models.Model):
     """
-    Model for discussion section on each school page 
+    Model for discussion section on each school page
     """
     school = models.ForeignKey(
         School, on_delete=models.CASCADE, related_name='comments')
@@ -66,12 +66,9 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    likes = models.ManyToManyField(
-        User, related_name='comment_likes', blank=True)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['created_on']
 
         def __str__(self):
             return f"Comment {self.body} wrriten by {self.name}"
-

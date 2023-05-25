@@ -19,8 +19,8 @@ def schools_list(request):
     total_number_of_schools = schools.count()
 
     context = {
-        'schools': schools,
-        'total_number_of_schools': total_number_of_schools,
+        "schools": schools,
+        "total_number_of_schools": total_number_of_schools,
     }
 
     return render(request, 'schools.html', context)
@@ -34,27 +34,26 @@ class SchoolDetail(View):
         """
         queryset = School.objects.all()
         school = get_object_or_404(queryset, slug=slug)
-        comments = school.comments.filter(approved=True).order_by('created_on')
+        comments = school.comments.filter(approved=True).order_by(
+            '-created_on')
 
         return render(
             request,
             "school_detail.html",
             {
-                'school': school,
-                'comments': comments,
-                'commented': False,
-                'comment_form': CommentForm()
+                "school": school,
+                "comments": comments,
+                "commented": False,
+                "comment_form": CommentForm()
             },
         )
 
-    def school(self, request, slug, *args, **kwargs):
+    def post(self, request, slug, *args, **kwargs):
 
         queryset = School.objects.all()
         school = get_object_or_404(queryset, slug=slug)
-        comments = school.comments.filter(approved=True).order_by('-created_on')
-        # liked = False 
-        #if post.likes.filter(id=self.request.user.id).exists():
-        # liked = True
+        comments = school.comments.filter(approved=True).order_by(
+            '-created_on')
 
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -70,10 +69,9 @@ class SchoolDetail(View):
             request,
             "school_detail.html",
             {
-                'school': school,
-                'comments': comments,
-                'commented': True,
+                "school": school,
+                "comments": comments,
+                "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
             },
         )
