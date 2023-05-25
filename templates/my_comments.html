@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for comment in comments %}
+    <div class="comment">
+        <p>{{ comment.school }}</p>
+        <p>{{ comment.body }}</p>
+        <p>{{ comment.created_on }}</p>
+        <!-- Display other comment details as needed -->
+    </div>
+{% endfor %}
+
+
+
+{% endblock %}

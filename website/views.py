@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.views import View
-from django.http import HttpResponse
-from .models import School
+from django.http import HttpResponse, HttpRequest
+from .models import School, Comment
 from .forms import CommentForm
+from django.contrib.auth.decorators import login_required
 
 
 class Home(generic.TemplateView):
@@ -24,6 +25,17 @@ def schools_list(request):
     }
 
     return render(request, 'schools.html', context)
+
+
+def my_comments(request, user):
+    user = request.user  # Get the currently logged-in user
+    comments = Comment.objects.filter(user=user)
+
+    context = {
+        "user": user,
+        "comments": comments,
+    }
+    return render(request, 'my_comments.html', context)
 
 
 class SchoolDetail(View):
@@ -75,3 +87,27 @@ class SchoolDetail(View):
                 "comment_form": comment_form,
             },
         )
+
+
+"""
+@login_required
+def edit_comment(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('school_detail', pk=comment.pk)
+    else:
+        form = CommentForm(instance=comment)
+    return render(request, 'edit_comment.html', {'form': form})
+
+
+@login_required
+def delete_comment(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('school_detail')
+    return render(request, 'delete_comment.html', {'comment': comment})
+"""
