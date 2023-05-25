@@ -29,19 +29,7 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  
                   <a class="nav-link" href="{% url 'schools' %}">Browse All Schools</a>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Regions
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">South East</a></li>
-                      <li><a class="dropdown-item" href="#">South West</a></li>
-                      <li><a class="dropdown-item" href="#">North East</a></li>
-                      <li><a class="dropdown-item" href="#">North West</a></li>
-                    </ul>
-                  </li>
                   {% if user.is_authenticated %}
                     <div class="navbar-right">
                     <a class="btn btn-outline-light nav-item" href="{% url 'account_logout' %}">Logout</a>
