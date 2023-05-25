@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 {% load static %} 
 
 <!-- Give users a prompt to add a comment/look at comments  -->
@@ -50,9 +52,49 @@
 </div>
 </div>
 </div>
-
-
 <!--  Comment form --> 
+
+<!--  non-logged in users can see comments but cannot add them --> 
+<div class="row">
+    <div class="col-md-6 card mb-4 mt-3 text-center">
+        <h4>Comment Section:</h4>
+        <div class="card-body">
+            <!--For loop for iteration of comments-->
+            {% for comment in comments %}
+            <div class="comments" style="padding: 10px;">
+                <p class="font-weight-bold">
+                    {{ comment.name }}
+                    <span class=" text-muted font-weight-normal">
+                        {{ comment.created_on }}
+                    </span> wrote:
+                </p>
+                {{ comment.body | linebreaks }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-4 card mb-4 mt-3">
+        <div class="card-body">
+            {% if commented %}
+            <div class="alert alert-success" role="alert">
+                Your comment is awaiting approval
+            </div>
+            {% else %}
+            {% if user.is_authenticated %}
+
+            <h4>Please leave a comment or participate in discussion </h4>
+            <p>User: {{ user.username }}</p>
+            <form method="post" style="margin-top: 1.3em">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+            <button type="submit" class="btn btn-dark">Submit Comment</button>
+        </form>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
 

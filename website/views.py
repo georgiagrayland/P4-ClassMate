@@ -3,6 +3,7 @@ from django.views import generic
 from django.views import View
 from django.http import HttpResponse
 from .models import School
+from .forms import CommentForm
 
 
 class Home(generic.TemplateView):
@@ -10,7 +11,6 @@ class Home(generic.TemplateView):
     template_name = 'index.html'
 
 
-# Put in filerting tool if time
 def schools_list(request):
     """
     A view that displays all schools for users to browse
@@ -34,16 +34,16 @@ class SchoolDetail(View):
         """
         queryset = School.objects.all()
         school = get_object_or_404(queryset, slug=slug)
-        # comments = School.comments.filter(approved=True).order_by('created_on)
+        comments = school.comments.filter(approved=True).order_by('created_on')
 
         return render(
             request,
             "school_detail.html",
             {
                 'school': school,
-                # 'comment': comment,
-                # 'commented': False,
-                # 'comment_form': CommentForm()
+                'comments': comments,
+                'commented': False,
+                'comment_form': CommentForm()
             },
         )
 
@@ -51,17 +51,29 @@ class SchoolDetail(View):
 
         queryset = School.objects.all()
         school = get_object_or_404(queryset, slug=slug)
-        # comments = School.comments.filter(approved=True).order_by('-created_on)
-        # liked = false 
-        # if post.likes.filter(id=self.request.user.id).exists():
+        comments = school.comments.filter(approved=True).order_by('-created_on')
+        # liked = False 
+        #if post.likes.filter(id=self.request.user.id).exists():
         # liked = True
 
-    # Enter part for comment form
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.school = school
+            comment.save()
+        else:
+            comment_form = CommentForm()
 
         return render(
             request,
             "school_detail.html",
             {
                 'school': school,
+                'comments': comments,
+                'commented': True,
+                "comment_form": comment_form,
+                "liked": liked
             },
         )

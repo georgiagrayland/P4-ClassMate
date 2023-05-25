@@ -43,8 +43,6 @@ class School(models.Model):
     excerpt = models.TextField(blank=True)
     specialisation = models.CharField(max_length=200)
     description = models.TextField()
-    rating = models.ManyToManyField(
-        User, related_name='school_rating', blank=True)
     featured = models.BooleanField(default=False)
 
     class Meta:
@@ -75,5 +73,5 @@ class Comment(models.Model):
         ordering = ['-created_on']
 
         def __str__(self):
-            return f"Review {self.body} wrriten by {self.name}"
+            return f"Comment {self.body} wrriten by {self.name}"
 
