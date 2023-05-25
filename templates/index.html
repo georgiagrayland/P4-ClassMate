@@ -7,8 +7,12 @@
     <div class="bg-image main-image">
         <div class="pt-5 welcome-message text-center">
         <h1 class="welcome">Welcome to ClassMate</h1>
-        <h2 class="welcome-text">Helping you make confident choices around schools and education</h2> 
+        <h2 class="welcome-text">Helping you make confident choices around schools and education</h2>
+        {% if user.is_authenticated %}
+        <p class="welcome-text">Welcome back!<a href="{% url 'schools' %}">View school pages </a>to leave comments and interact with other users</p>
+        {% else %}
         <p class="welcome-text"><a href="{% url 'account_signup' %}">Create an account </a>to view discussions, rate schools and interact with other users</p>
+        {% endif %}
         </div>
     </div>
 </div>
