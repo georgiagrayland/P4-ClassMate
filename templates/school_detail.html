@@ -38,7 +38,7 @@
             <p class="grades">Average GCSE Maths Grade: {{ school.avg_gcse_maths_grade }}</p>
             <p class="grades">Average GCSE English Grade: {{ school.avg_gcse_english_grade }}</p>
             <p class="grades">Percentage of Students Achieveing Grade 5 or above at GCSE: {{ school.percentage_gcse_5_above }}</p>
-            </div>
+        </div>
         </div>
         <hr>
         <!--School description -->
@@ -88,6 +88,8 @@
                 {{ comment_form | crispy }}
                 {% csrf_token %}
             <button type="submit" class="btn btn-dark">Submit Comment</button>
+            {% else %}
+            <h4>Please login or create an account to leave a comment!</h4>
         </form>
             {% endif %}
             {% endif %}
