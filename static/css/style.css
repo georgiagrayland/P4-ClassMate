@@ -96,6 +96,15 @@ footer i:hover{
     color: #003049;
 }
 
+.schools-list-2{
+    font-size: 3.2rem;
+    color: #FDF0D5;
+}
+
+.list-header{
+    padding-top: 90px;
+}
+
 h6 i{
     padding-right: 10px;
 }
@@ -118,6 +127,10 @@ h6 i{
 .school-name{
     font-family: Merriweather, sans-serif;
     color: #235789;
+}
+
+.fa-arrow-left{
+    color: white;
 }
 
 /* --------------------- Signup / Login Page --------------------- */
