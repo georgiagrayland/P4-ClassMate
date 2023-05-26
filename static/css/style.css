@@ -37,10 +37,6 @@ nav{
     margin-bottom: 30px;
 }
 
-footer p{
-    margin-bottom: 30px;
-}
-
 .navbar-nav a:hover{
     color: #F1D302;
     text-decoration: underline;
@@ -53,6 +49,10 @@ body{
 /* --------------------- Footer --------------------- */
 footer{
     background-color: #780000;
+}
+
+footer p{
+    margin-bottom: 30px;
 }
 
 footer i{
