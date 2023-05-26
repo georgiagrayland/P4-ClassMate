@@ -37,6 +37,7 @@ footer p{
 
 .navbar-nav a:hover{
     color: #F1D302;
+    text-decoration: underline;
 }
 
 /* --------------------- General body --------------------- */
@@ -61,16 +62,20 @@ footer i:hover{
 
 /* --------------------- Homepage --------------------- */
 .welcome, .welcome-text{
-    /*color:#780000;*/
-    color: #F1D302;
+    color: black;
 }
 
 .welcome-text{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.welcome-text a{
+    color: #003049;
 }
 
 .main-image {
-    background: url('../media/books.jpg') no-repeat;
+    background: url('../media/leaf-image.jpg') no-repeat;
     background-size: cover;
     height: 60vh;
 }
