@@ -90,6 +90,10 @@ footer i:hover{
     height: 40vh;
 }
 
+.home-card{
+    font-size: 1.5rem;
+}
+
 /* --------------------- Schools List Page  --------------------- */
 
 .school-page{
