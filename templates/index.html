@@ -11,7 +11,7 @@
         {% if user.is_authenticated %}
         <p class="welcome-text">Welcome back!<a href="{% url 'schools' %}"> View school pages </a>to leave comments and interact with other users</p>
         {% else %}
-        <p class="welcome-text"><a href="{% url 'account_signup' %}">Create an account </a>to view discussions, rate schools and interact with other users</p>
+        <p class="welcome-text"><a href="{% url 'account_signup' %}">Create an account </a>to leave comments on school and interact with other users</p>
         {% endif %}
         </div>
     </div>
