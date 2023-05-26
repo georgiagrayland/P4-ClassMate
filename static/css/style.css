@@ -40,8 +40,6 @@ footer p{
     text-decoration: underline;
 }
 
-/* --------------------- General body --------------------- */
-
 body{
     font-family: Assistant, sans-serif;
 }
@@ -72,6 +70,10 @@ footer i:hover{
 
 .welcome-text a{
     color: #003049;
+}
+
+.welcome-text a:hover{
+    color: #a2d2ff;
 }
 
 .main-image {
