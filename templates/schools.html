@@ -25,7 +25,7 @@
                   {% if "placeholder" in school.featured_image.url %}
                   <img src="../static/media/placeholder.jpg" class="card-img" alt="Placeholder general school image">
                   {% else %}
-                  <img src="{{ school.featured_image.url }}" class="card-img" alt="{{ school.name }}">
+                  <img src="{{ school.featured_image.url }}" class="card-img card-list" alt="{{ school.name }}">
                   {% endif %} 
                 </div>
                 <div class="col-md-6">

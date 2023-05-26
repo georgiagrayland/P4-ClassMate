@@ -120,6 +120,10 @@ h6 i{
     padding-right: 10px;
 }
 
+.card-list{
+    height: 50vh;
+}
+
 .specialisation{
     font-weight: bolder;
 }
@@ -149,6 +153,10 @@ h6 i{
 
 .fa-arrow-left{
     color: white;
+}
+
+.key-numbers, .grades{
+    font-size: 1.15rem;
 }
 
 /* --------------------- Signup / Login Page --------------------- */
