@@ -61,7 +61,8 @@ footer i:hover{
 
 /* --------------------- Homepage --------------------- */
 .welcome, .welcome-text{
-    color:#780000;
+    /*color:#780000;*/
+    color: #F1D302;
 }
 
 .welcome-text{
@@ -72,6 +73,14 @@ footer i:hover{
     background: url('../media/books.jpg') no-repeat;
     background-size: cover;
     height: 60vh;
+}
+
+.fa-solid{
+    color: #235789;
+}
+
+.card-img-top{
+    height: 40vh;
 }
 
 /* --------------------- Schools List Page  --------------------- */

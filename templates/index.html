@@ -6,10 +6,10 @@
 <div class="container-fluid">
     <div class="bg-image main-image">
         <div class="pt-5 welcome-message text-center">
-        <h1 class="welcome">Welcome to ClassMate</h1>
+        <h1 class="welcome pt-5">Welcome to ClassMate</h1>
         <h2 class="welcome-text">Helping you make confident choices around schools and education</h2>
         {% if user.is_authenticated %}
-        <p class="welcome-text">Welcome back!<a href="{% url 'schools' %}">View school pages </a>to leave comments and interact with other users</p>
+        <p class="welcome-text">Welcome back!<a href="{% url 'schools' %}"> View school pages </a>to leave comments and interact with other users</p>
         {% else %}
         <p class="welcome-text"><a href="{% url 'account_signup' %}">Create an account </a>to view discussions, rate schools and interact with other users</p>
         {% endif %}
@@ -36,30 +36,31 @@
         <img class="card-img-top" src="/static/media/queen-elizabeth-grammar.jpg" alt="Card image">
         <div class="card-body">
           <h5 class="card-title">Queen Elizabeth Grammar School</h5>
-          <i class="fa-solid fa-location-dot"></i>
-          <i class="fa-solid fa-book-open"></i>
-          <i class="fa-solid fa-graduation-cap"></i>
-          <p class="card-text">Location, Gcse grade, specialisation</p>
+          <i class="fa-solid fa-location-dot"></i><p class="card-text">London</p>
+          <i class="fa-solid fa-book-open"></i><p class="card-text">Sciences</p>
+          <i class="fa-solid fa-graduation-cap"></i><p class="card-text">Girls</p>
         </div>
       </div>
     </div>
     <div class="col-sm-4 mb-3 mb-sm-0 p3">
       <div class="card">
-        <img class="card-img-top" src="/static/media/home-image.jpg" alt="Card image">
+        <img class="card-img-top" src="/static/media/school-3.jpg" alt="Card image">
         <div class="card-body">
-          <h5 class="card-title">Lakehshore Academy</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-dark">View details</a>
+          <h5 class="card-title">Ridgeview Academy</h5>
+          <i class="fa-solid fa-location-dot"></i><p class="card-text">Bristol</p>
+          <i class="fa-solid fa-book-open"></i><p class="card-text">Maths & Computing</p>
+          <i class="fa-solid fa-graduation-cap"></i><p class="card-text">Co-educational</p>
         </div>
       </div>
     </div>
     <div class="col-sm-4 mb-3 mb-sm-0 p3">
         <div class="card">
-          <img class="card-img-top" src="/static/media/springwood-hall.jpg" alt="Card image">
+          <img class="card-img-top" src="/static/media/school-1.jpg" alt="Card image">
           <div class="card-body">
-            <h5 class="card-title">Sterling Heights</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-dark">View details</a>
+            <h5 class="card-title">Grove College</h5>
+            <i class="fa-solid fa-location-dot"></i><p class="card-text">Newcastle</p>
+            <i class="fa-solid fa-book-open"></i><p class="card-text">Humanities</p>
+            <i class="fa-solid fa-graduation-cap"></i><p class="card-text">Boys</p>
           </div>
         </div>
       </div>
