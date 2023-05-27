@@ -3,17 +3,16 @@
 {% block content %}
 
 {% load crispy_forms_tags %}
+{% extends 'base.html' %}
 
-<form method="POST" action="add">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <p>My Comments:</p>
-        <p>
-            <button type="submit">Edit Comment</button>
-        </p>
-    </div>
-</form>
-
+    <h1>Delete Comment</h1>
+    <p>Are you sure you want to delete this comment?</p>
+    <p>{{ comment.created_on }}</p>
+    <p>{{ comment.school }}</p>
+    <p>{{ comment.body }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
 
 {% endblock %}

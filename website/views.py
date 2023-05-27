@@ -28,7 +28,7 @@ def schools_list(request):
 
 
 def my_comments(request, user):
-    user = request.user  # Get the currently logged-in user
+    user = request.user
     comments = Comment.objects.filter(user=user)
 
     context = {
@@ -36,6 +36,27 @@ def my_comments(request, user):
         "comments": comments,
     }
     return render(request, 'my_comments.html', context)
+
+
+def edit_comment(request, comment_uuid):
+    comment = get_object_or_404(Comment, uuid=comment_uuid, user=request.user)
+
+    if request.method == 'POST':
+        comment.body = request.POST.get('comment_body')
+        comment.save()
+        return redirect('my_comments')
+
+    return render(request, 'edit_comment.html', {'comment': comment})
+
+
+def delete_comment(request, comment_uuid):
+    comment = get_object_or_404(Comment, uuid=comment_uuid, user=request.user)
+
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('my_comments')
+
+    return render(request, 'delete_comment.html', {'comment': comment})
 
 
 class SchoolDetail(View):
@@ -87,27 +108,3 @@ class SchoolDetail(View):
                 "comment_form": comment_form,
             },
         )
-
-
-"""
-@login_required
-def edit_comment(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
-    if request.method == 'POST':
-        form = CommentForm(request.POST, instance=comment)
-        if form.is_valid():
-            form.save()
-            return redirect('school_detail', pk=comment.pk)
-    else:
-        form = CommentForm(instance=comment)
-    return render(request, 'edit_comment.html', {'form': form})
-
-
-@login_required
-def delete_comment(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
-    if request.method == 'POST':
-        comment.delete()
-        return redirect('school_detail')
-    return render(request, 'delete_comment.html', {'comment': comment})
-"""

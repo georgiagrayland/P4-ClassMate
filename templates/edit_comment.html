@@ -1,19 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-{% load crispy_forms_tags %}
-
-<form method="POST" action="add">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <p>My Comments:</p>
-        <p>
-            <button type="submit">Edit Comment</button>
-        </p>
-    </div>
-</form>
-
-
+    <h3>Edit Comment</h3>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="comment_body">{{ comment.body }}</textarea>
+        <input type="submit" value="Save">
+    </form>
 {% endblock %}
