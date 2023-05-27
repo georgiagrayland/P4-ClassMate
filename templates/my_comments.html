@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<div class="col-md-8 mt-3 offset-md-1">
     {% if comments %}
         <ul class="comment">
         {% for comment in comments %}
@@ -15,7 +16,7 @@
         </ul>
         {% endfor %}
     {% else %}
-    <p>You haven't made any comments yet!</p>
+    <p class="no-comments">You haven't made any comments yet!</p>
     {% endif %}
-
+</div>
 {% endblock %}

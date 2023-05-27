@@ -187,6 +187,9 @@ h6 i{
 
 /* --------------------- My comments page --------------------- */
 
+.no-comments{
+    font-size: 1.4rem;
+}
 
 /* --------------------- Edit/Delete Comment --------------------- */
 
