@@ -59,7 +59,8 @@ class Comment(models.Model):
     """
     Model for discussion section on each school page
     """
-    author = models.ForeignKey(User, on_delete=models.CASCADE, default="")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, blank=True, null=True)
     school = models.ForeignKey(
         School, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=100)
