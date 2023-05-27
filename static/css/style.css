@@ -88,6 +88,14 @@ footer i:hover{
     height: 60vh;
 }
 
+#animated-text{
+    transition: opacity 0.4s ease-in-out;
+}
+
+.hide{
+    opacity: 0;
+}
+
 .fa-solid{
     color: #235789;
 }

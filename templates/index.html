@@ -24,7 +24,7 @@
     <div class="pt-4 pb-3 mt-4 mb-2">
         <div class="row">
             <div class="col-12">
-                <h2>Popular on ClassMate</h2>
+                <h2 id="animated-text">Popular on ClassMate</h2>
             </div>
         </div>
     </div>
@@ -69,5 +69,17 @@
       </div>
   </div>
 
+<script>
+  const textAnimation = document.getElementById('animated-text')
+
+  setInterval(() => {
+    textAnimation.classList.add('hide');
+
+    setTimeout(() => {
+      textAnimation.classList.remove('hide');
+    }, 500);
+  }, 2000);
+
+</script>
 
 {% endblock %}
