@@ -184,3 +184,17 @@ h6 i{
     font-size: 1.1rem;
     margin-top: 30px;
 }
+
+/* --------------------- My comments page --------------------- */
+
+
+/* --------------------- Edit/Delete Comment --------------------- */
+
+.delete-comment{
+    font-family: Merriweather, sans-serif;
+    color: #235789;
+}
+
+.comment-message{
+    font-size: 1.3rem;
+}

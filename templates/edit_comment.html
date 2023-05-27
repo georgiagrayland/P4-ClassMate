@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3>Edit Comment</h3>
+<div class="col-md-8 mt-3 offset-md-1">
+    <h3 class="delete-comment">Edit Comment:</h3>
     <form method="post">
         {% csrf_token %}
-        <textarea name="comment_body">{{ comment.body }}</textarea>
-        <input type="submit" value="Save">
+        <textarea name="comment_body" rows="3">{{ comment.body }}</textarea><hr>
+        <input type="submit" value="Save" class="btn btn-dark">
     </form>
+</div>
 {% endblock %}
