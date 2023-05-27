@@ -2,20 +2,20 @@
 
 {% block content %}
 
-{% if comments %}
-    <ul class="comment">
-    {% for comment in comments %}
-    <li>{{ comment.school }}</li>
-    <li>{{ comment.body }}</li>
-    <li>{{ comment.created_on }}</li>
-    <li>
-        <a href="{% url 'edit_comment' comment.uuid %}">Edit</a>
-        <a href="{% url 'delete_comment' comment.uuid %}">Delete Comment</a>
-    </li>
-    </ul>
-    {% endfor %}
-{% else %}
+    {% if user.comments %}
+        <ul class="comment">
+        {% for comment in user.comments %}
+        <li>{{ comment.school }}</li>
+        <li>{{ comment.body }}</li>
+        <li>{{ comment.created_on }}</li>
+        <li>
+            <a href="{% url 'edit_comment' comment.uuid %}">Edit</a>
+            <a href="{% url 'delete_comment' comment.uuid %}">Delete Comment</a>
+        </li>
+        </ul>
+        {% endfor %}
+    {% else %}
     <p>You haven't made any comments yet!</p>
-{% endif %}
+    {% endif %}
 
 {% endblock %}
