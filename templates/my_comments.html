@@ -2,15 +2,15 @@
 
 {% block content %}
 
-    {% if user.comments %}
+    {% if comments %}
         <ul class="comment">
-        {% for comment in user.comments %}
+        {% for comment in comments %}
         <li>{{ comment.school }}</li>
         <li>{{ comment.body }}</li>
         <li>{{ comment.created_on }}</li>
         <li>
-            <a href="{% url 'edit_comment' comment.uuid %}">Edit</a>
-            <a href="{% url 'delete_comment' comment.uuid %}">Delete Comment</a>
+            <a href="{% url 'edit_comment' comment.id %}">Edit</a>
+            <a href="{% url 'delete_comment' comment.id %}">Delete Comment</a>
         </li>
         </ul>
         {% endfor %}

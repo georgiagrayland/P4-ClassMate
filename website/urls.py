@@ -7,7 +7,7 @@ urlpatterns = [
     path('schools/<slug:slug>/', views.SchoolDetail.as_view(), name='school_detail'),
     path('comments/', views.my_comments, name='my_comments'),
     path(
-        'edit/<uuid:comment_uuid>/', views.edit_comment, name='edit_comment'),
+        'comments/edit/<int:comment_id>/', views.edit_comment, name='edit_comment'),
     path(
-        'delete/<uuid:comment_uuid>/', views.delete_comment, name='delete_comment'),
+        'comments/delete/<int:comment_id>/', views.delete_comment, name='delete_comment'),
 ]

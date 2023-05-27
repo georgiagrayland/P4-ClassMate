@@ -5,6 +5,7 @@ from django.http import HttpResponse, HttpRequest
 from .models import School, Comment
 from .forms import CommentForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 class Home(generic.TemplateView):
@@ -28,7 +29,8 @@ def schools_list(request):
 
 
 def my_comments(request):
-    author = request.user
+    # author = request.user
+    author = User.objects.get(username=request.user.username)
     comments = Comment.objects.filter(author=author)
 
     context = {
@@ -38,8 +40,8 @@ def my_comments(request):
     return render(request, 'my_comments.html', context)
 
 
-def edit_comment(request, comment_uuid):
-    comment = get_object_or_404(Comment, uuid=comment_uuid, user=request.user)
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
 
     if request.method == 'POST':
         comment.body = request.POST.get('comment_body')
@@ -49,14 +51,14 @@ def edit_comment(request, comment_uuid):
     return render(request, 'edit_comment.html', {'comment': comment})
 
 
-def delete_comment(request, comment_uuid):
-    comment = get_object_or_404(Comment, uuid=comment_uuid, user=request.user)
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
 
     if request.method == 'POST':
         comment.delete()
         return redirect('my_comments')
 
-    return render(request, 'delete_comment.html', {'comment': comment})
+    return render(request, 'delete_comment.html')
 
 
 class SchoolDetail(View):
@@ -94,6 +96,7 @@ class SchoolDetail(View):
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.school = school
+            comment.author = User.objects.get(username=request.user.username)
             comment.save()
         else:
             comment_form = CommentForm()
