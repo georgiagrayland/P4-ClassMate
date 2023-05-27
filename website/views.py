@@ -27,12 +27,12 @@ def schools_list(request):
     return render(request, 'schools.html', context)
 
 
-def my_comments(request, user):
-    user = request.user
-    comments = Comment.objects.filter(user=user)
+def my_comments(request):
+    author = request.user
+    comments = Comment.objects.filter(author=author)
 
     context = {
-        "user": user,
+        "author": author,
         "comments": comments,
     }
     return render(request, 'my_comments.html', context)
