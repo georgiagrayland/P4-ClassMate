@@ -4,16 +4,17 @@
 
 <div class="col-md-8 mt-3 offset-md-1">
     {% if comments %}
-        <ul class="comment">
         {% for comment in comments %}
-        <li>{{ comment.school }}</li>
-        <li>{{ comment.body }}</li>
-        <li>{{ comment.created_on }}</li>
+        <ul>
+        <li id="commented-school">{{ comment.school }}</li>
+        <li>({{ comment.created_on }})</li>
+        <li id="single-comment">{{ comment.body }}</li>
         <li>
-            <a href="{% url 'edit_comment' comment.id %}">Edit</a>
-            <a href="{% url 'delete_comment' comment.id %}">Delete Comment</a>
+            <a href="{% url 'edit_comment' comment.id %}" class="btn btn-success p-1">Edit Comment</a>
+            <a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger p-1">Delete Comment</a>
         </li>
         </ul>
+        <hr>
         {% endfor %}
     {% else %}
     <p class="no-comments">You haven't made any comments yet!</p>

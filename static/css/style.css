@@ -187,8 +187,22 @@ h6 i{
 
 /* --------------------- My comments page --------------------- */
 
+ul{
+    list-style-type: none;
+}
+
 .no-comments{
     font-size: 1.4rem;
+}
+
+#commented-school{
+    font-size: 1.3rem;
+}
+
+#single-comment{
+    font-size: 1.1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* --------------------- Edit/Delete Comment --------------------- */
