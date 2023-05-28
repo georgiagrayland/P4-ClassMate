@@ -182,6 +182,11 @@ h6 i{
     font-size: 0.9rem;
 }
 
+.key-box{
+    margin-top: 30px;
+    border: #780000 1px solid;
+}
+
 /* --------------------- Signup / Login Page --------------------- */
 
 .login-signup{
