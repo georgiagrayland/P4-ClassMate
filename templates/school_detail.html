@@ -54,8 +54,8 @@
 <!--  Comment form --> 
 
 <!--  non-logged in users can see comments from other users but cannot add them --> 
-<div class="row">
-    <div class="col-md-6 card mb-4 mt-3 text-center offset-1">
+<div class="row justify-content-center">
+    <div class="col-lg-6 col-md-12 card mb-4 mt-3 text-center">
         <h4 class="comment-title">Comment Section:</h4>
         <div class="card-body">
             <!--For loop for iteration of comments-->
@@ -73,7 +73,7 @@
             {% endfor %}
         </div>
     </div>
-    <div class="col-md-4 card mb-4 mt-3">
+    <div class="col-lg-4 col-md-12 card mb-4 mt-3">
         <div class="card-body">
             {% if commented %}
             <div class="alert alert-success" role="alert">
