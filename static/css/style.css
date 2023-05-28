@@ -121,7 +121,7 @@ footer i:hover{
 }
 
 .schools-list-2{
-    font-size: 3.2rem;
+    font-size: 2.7rem;
     color: #FDF0D5;
 }
 
@@ -134,7 +134,7 @@ h6 i{
 }
 
 .card-list{
-    height: 50vh;
+    /*height: 50vh;*/
 }
 
 .specialisation{
