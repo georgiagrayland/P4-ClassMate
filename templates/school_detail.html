@@ -18,16 +18,18 @@
 <!--School main info -->
 <div class="container">
     <div class="card">
-        <div class="row mg-lg-4">
-            <div class="col-12 col-lg-8">
-                <div class="image-container">
+        <div class="row">
+            <!--<div class="col-md-8">-->
+            <!--<div class="col-12 col-lg-8">-->
+                <div class="image-container col-md-7">
                     {% if "placeholder" in school.featured_image.url %}
                     <img src="../static/media/placeholder.jpg" class="card-img" alt="Placeholder general school image">
                     {% else %}
                     <img src="{{ school.featured_image.url }}" class="card-img" alt="{{ school.name }}">
                     {% endif %} 
-                  </div>
-                <div class="col-12 col-lg-4 pt-lg-4">
+                </div>
+                  <div class="col-md-4">
+                <!--<div class="col-12 col-lg-4 pt-lg-4">-->
                 <div class="card-body">
                     <h4 class="school-name">{{ school.name }}</h4>
                 </div> 
