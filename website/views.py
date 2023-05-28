@@ -9,6 +9,9 @@ from django.contrib.auth.models import User
 
 
 class Home(generic.TemplateView):
+    """
+    View that displays the homepage
+    """
     model = School
     template_name = 'index.html'
 
@@ -29,7 +32,9 @@ def schools_list(request):
 
 
 def my_comments(request):
-    # author = request.user
+    """
+    View that displays all comments a user has made back to them
+    """
     author = User.objects.get(username=request.user.username)
     comments = Comment.objects.filter(author=author)
 
@@ -41,6 +46,9 @@ def my_comments(request):
 
 
 def edit_comment(request, comment_id):
+    """
+    View that allows users to edit comments they have made
+    """
     comment = get_object_or_404(Comment, id=comment_id)
 
     if request.method == 'POST':
@@ -52,6 +60,9 @@ def edit_comment(request, comment_id):
 
 
 def delete_comment(request, comment_id):
+    """
+    View that allows users to delete any comments they have made
+    """
     comment = get_object_or_404(Comment, id=comment_id)
 
     if request.method == 'POST':

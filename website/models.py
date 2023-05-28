@@ -57,7 +57,7 @@ class School(models.Model):
 
 class Comment(models.Model):
     """
-    Model for discussion section on each school page
+    Model for discussion/comment section on each school page
     """
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, blank=True, null=True)
