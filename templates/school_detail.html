@@ -4,23 +4,17 @@
 
 {% load crispy_forms_tags %}
 
-<!-- Give users a prompt to add a comment/look at comments  -->
-
-<!-- Add JS on click to go back to previous page on this button -->
-
+<!-- Back button to schools list page -->
 <div class="back-button p-2">
 <span class="btn btn-dark btn-sm">
     <a href="{% url 'schools' %}"><i class="fa-solid fa-arrow-left"></i> Go back</a>
-   <!--<a onclick="history.back()" aria-label="back to previous page" class="p-2"><i class="fa-solid fa-arrow-left"></i> Go back</a>--> 
 </span>
 </div>
 
-<!--School main info -->
+<!--School main info including image -->
 <div class="container">
     <div class="card">
         <div class="row">
-            <!--<div class="col-md-8">-->
-            <!--<div class="col-12 col-lg-8">-->
                 <div class="image-container col-md-7">
                     {% if "placeholder" in school.featured_image.url %}
                     <img src="../static/media/placeholder.jpg" class="card-img" alt="Placeholder general school image">
@@ -29,7 +23,6 @@
                     {% endif %} 
                 </div>
                   <div class="col-md-4">
-                <!--<div class="col-12 col-lg-4 pt-lg-4">-->
                 <div class="card-body">
                     <h4 class="school-name">{{ school.name }}</h4>
                 </div> 
@@ -57,9 +50,10 @@
 </div>
 </div>
 </div>
+
 <!--  Comment form --> 
 
-<!--  non-logged in users can see comments but cannot add them --> 
+<!--  non-logged in users can see comments from other users but cannot add them --> 
 <div class="row">
     <div class="col-md-6 card mb-4 mt-3 text-center offset-1">
         <h4 class="comment-title">Comment Section:</h4>
@@ -87,7 +81,7 @@
             </div>
             {% else %}
             {% if user.is_authenticated %}
-
+            <!-- Message changes depending on if user is logged in or not -->
             <h4>Please leave a comment or participate in discussion:</h4>
             <p>User: {{ user.username }}</p>
             <form method="post" style="margin-top: 1.3em">

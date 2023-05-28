@@ -8,6 +8,7 @@
         <div class="pt-5 welcome-message text-center">
         <h1 class="welcome pt-5">Welcome to ClassMate</h1>
         <h2 class="welcome-text">Helping you make confident choices around schools and education</h2>
+        <!-- Heading message and link changes depending on whether user is logged in or not -->
         {% if user.is_authenticated %}
         <p class="welcome-text">Welcome back!<a href="{% url 'schools' %}"> View school pages </a>to leave comments and interact with other users</p>
         {% else %}
