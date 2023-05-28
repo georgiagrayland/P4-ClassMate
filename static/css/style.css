@@ -173,6 +173,15 @@ h6 i{
     font-size: 1.15rem;
 }
 
+.comment-title{
+    font-family: Merriweather, sans-serif;
+    color: #235789;
+}
+
+.comment-info{
+    font-size: 0.9rem;
+}
+
 /* --------------------- Signup / Login Page --------------------- */
 
 .login-signup{

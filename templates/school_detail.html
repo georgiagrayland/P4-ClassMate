@@ -59,20 +59,21 @@
 
 <!--  non-logged in users can see comments but cannot add them --> 
 <div class="row">
-    <div class="col-md-6 card mb-4 mt-3 text-center">
-        <h4>Comment Section:</h4>
+    <div class="col-md-6 card mb-4 mt-3 text-center offset-1">
+        <h4 class="comment-title">Comment Section:</h4>
         <div class="card-body">
             <!--For loop for iteration of comments-->
             {% for comment in comments %}
-            <div class="comments" style="padding: 10px;">
-                <p class="font-weight-bold">
+            <div class="comments">
+                <p class="font-weight-bold comment-info">
                     {{ comment.name }}
-                    <span class=" text-muted font-weight-normal">
+                    <span class="text-muted font-weight-normal comment-info">
                         {{ comment.created_on }}
                     </span> wrote:
                 </p>
                 {{ comment.body | linebreaks }}
             </div>
+            <hr>
             {% endfor %}
         </div>
     </div>
@@ -85,12 +86,12 @@
             {% else %}
             {% if user.is_authenticated %}
 
-            <h4>Please leave a comment or participate in discussion </h4>
+            <h4>Please leave a comment or participate in discussion:</h4>
             <p>User: {{ user.username }}</p>
             <form method="post" style="margin-top: 1.3em">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-            <button type="submit" class="btn btn-dark">Submit Comment</button>
+            <button type="submit" class="btn btn-dark" style="margin-top: 0.9em">Submit Comment</button>
             {% else %}
             <h4>Please login or create an account to leave a comment!</h4>
         </form>
