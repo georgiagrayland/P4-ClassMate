@@ -10,7 +10,7 @@ html, body{
 }
 
 .content{
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 /* --------------------- Nav Bar --------------------- */
@@ -56,7 +56,6 @@ footer{
 }
 
 .footer{
-    bottom: 0;
     left: 0;
     width: 100%;
 }
@@ -237,4 +236,14 @@ ul{
 
 .comment-message{
     font-size: 1.3rem;
+}
+
+/* --------------------- Media Queries --------------------- */
+
+@media only screen
+    and (min-width: 768px)
+    and (max-width: 1024px) {
+        .card-img-top {
+            height: fit-content;
+        }
 }
