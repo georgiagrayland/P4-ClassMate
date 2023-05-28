@@ -5,8 +5,12 @@ body{
 }
 
 html, body{
-    height: 100%;
+    min-height: 100%;
     margin: 0;
+}
+
+.content{
+    min-height: 100%;
 }
 
 /* --------------------- Nav Bar --------------------- */
@@ -49,6 +53,12 @@ body{
 /* --------------------- Footer --------------------- */
 footer{
     background-color: #780000;
+}
+
+.footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 footer p{
