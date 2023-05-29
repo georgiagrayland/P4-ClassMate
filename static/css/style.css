@@ -91,7 +91,7 @@ footer i:hover{
 }
 
 .main-image {
-    background: url('../media/leaf-image.jpg') no-repeat;
+    background: url('https://res.cloudinary.com/dhigosr0c/image/upload/v1685302394/static/media/leaf-image.e73f5f68417a.jpg') no-repeat;
     background-size: cover;
     height: 60vh;
 }
