@@ -23,7 +23,6 @@ gender_options = (
 )
 
 
-# Create your models here.
 class School(models.Model):
     """
     School model, which stores all information about the schools
