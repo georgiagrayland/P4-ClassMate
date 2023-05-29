@@ -85,15 +85,15 @@ Features included were implemented using **Agile Principles**, in the following 
 
 Colors for this project were selected based on contrast, and adherence to the theme. 
 
-#FDF0D5 is the base body colour, providing a backdrop for all pages. This was chosen due to its similarity to the colour of old book paper, to give the site a book effect. 
+**#FDF0D5:** The base body colour, providing a backdrop for all pages. This was chosen due to its similarity to the colour of old book paper, to give the site a book effect. 
 
-#F1D302 is the ClassMate logo colour. This was chosen due to the contrast with the 'Barn Red' Nav bar and footer colour. 
+**#F1D302:** The ClassMate logo colour. This was chosen due to the contrast with the 'Barn Red' Nav bar and footer colour. 
 
-#780000 is the base color for the navbar and footer. This colour was selected as many school uniforms are comprised of this colour, and many schools have this color incorporated into their logo/crest/uniform/books. 
+**#780000:** The base color for the navbar and footer. This colour was selected as many school uniforms are comprised of this colour, and many schools have this color incorporated into their logo/crest/uniform/books. 
 
-#235789 is the blue color of most of the heading text and icons throughout the site. This was chosen due to its silimarity to blue pen ink, hence fitting the school theme. It also contrasts well with the white background of the cards, and the base body colour. 
+**#235789:** The blue color of most of the heading text and icons throughout the site. This was chosen due to its silimarity to blue pen ink, hence fitting the school theme. It also contrasts well with the white background of the cards, and the base body colour. 
 
-#C1292E/White: Most links show Fire Engine Red or white upon hover, for the reason of colour contrast so ease of sight for the user. 
+**#C1292E/White:** Most links show Fire Engine Red or white upon hover, for the reason of colour contrast so ease of sight for the user. 
 
 ### Typography 
 
@@ -114,9 +114,32 @@ All images are responsive to a range of screen sizes.
 
 *See credits section for more information on image sources.*
 
+### Databases 
+PostgreSql is used for hosting the data on this site. 
+
+### Models 
+
+### School 
+- The School model is where all Schools in the database are held. 
+- It has a number of varying fiels to hold key information and number about schools, a longer description and images. 
+- It is connected to the Comment model through each School name. 
+
+### Comment 
+- The comment model allows (logged-in) to leave comments on individual school pages. 
+- It is connected to the School model, via the School name. 
+- It is also connected to users through each comment id. 
+- It allows users to leave their username and timestamp on comments for their own reference. 
+- The Comment model has full Create, Read, Update, Delete (CRUD) functionality on the front-end. 
+
+
+[link to database diagram](Database Diagram)
+
 --- 
 ## The Skeleton Plane
-
+- The theme of this website follows through in the design. 
+- Bootsrap columns, rows, and cards have been utilised throughout to divide the pages, and maintain the layout throughout the site. 
+- The School theme is present throughout the images, colours, and icons. 
+- The layout of each page is relatively simple, for ease of use for users, and to maintian responsiveness across all screen sizes. 
 
 
 ---
@@ -159,9 +182,139 @@ All images are responsive to a range of screen sizes.
 
 ![Footer](docs/images/footer.png)
 
-**Homepage**:
+---
+## Individual Pages:
 
-### Header & Introduction Message 
+## Homepage
 
-### 
+### Header & Introduction Message:
+- Under the nav bar, the homepage has a header which explains to users the purpose of the site.
+
+- The message and link of the header changes whether the user is logged in or not:
+
+**New user / user not logged in**
+- If a user is not logged in the site, the header will show an introduction and message saying the purpose of the site. 
+- The message prompts the user to create an account or log in, so they can enjoy the additional benfits of having an account, with a link to the login/signup page. 
+- The link changes to a contrasting colour upon hover, for ease of use and accessibility. 
+
+![Header](docs/images/header.png)
+
+**Logged-in User**
+- If a user is logged in, the header will display a different message and link. 
+- The message welcomes the user back, and the link changes to prompting the user to visit the browse schools page. 
+
+![Header logged in user](docs/images/logged-header.png)
+
+### Popular on this Site Section
+- Under the header, there is a flashing title for 'Popular on this site'
+- This catches the users attention and displays cards to 3 schools from the database below. 
+- This section is aimed at geting people interested in viewing the rest of the site and creating an account. 
+
+![Popular on this Site](docs/images/popular-section.png)
+
+---
+## Browse Schools Page
+- When any user clicks 'Browse all Schools' from the Navbar, or a logged-in user clicks 'View School Pages' from the homepage header, they are taken to the Schools List page. 
+- This page has a header clearly demonstrating what the purpose of this page is:
+
+![Browse Header](docs/images/list-heaer.png)
+
+- Underneath this, all Schools currently in the database are displayed as a list of cards on the page. 
+- Each school has a card with an image on the left. 
+- On the right of each card is a School name, which is a link to the relevant 'School Detail' Page. 
+- Under the name, there are 3 key pieces of information with related icons: Location, School Type, and School Gender. 
+- There is a short description of each school, aimed at getting the user interested in clicking on the School Detail page. 
+- There are also 2 more key data points for each school: any subjects they specialise in, and average class size. 
+- **The inclusion of these pieces of information was aimed at allowing users to compare and contrast important parts of each schoool from this page, whilst also making them want to learn more by clicking on an individual school detail page.** 
+
+*Each school is displayed in a responsive card in a vertical list:*
+
+![List card](docs/images/list-card.png)
+
+---
+## School Detail Page
+
+
+## My Activity Page 
+
+## Edit Comment Page
+
+## Delete Comment Page 
+
+## Login Page
+
+## Singup Page
+
+## Sign Out Page
+
+---
+
+## Technologies Used 
+
+- [Python](https://www.python.org/):
+    - [Django 3.2](https://www.djangoproject.com/)
+    - [AllAuth](https://django-allauth.readthedocs.io/en/latest/)
+    - [Summernote](https://summernote.org/)
+    - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
+
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Bootsrap](https://getbootstrap.com/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)
+
+### Storage& Hosting
+- [Heroku]()
+- [GitHub]()
+- [ElephantSQL]()
+- [Cloudinary]()
+
+### IDE & Version Control
+- Git
+    - Used as a version control in the terminal.
+
+- Gitpod
+    - Where files were created and the code was written.
+
+### Other Tools
+- [TinyPNG](https://tinypng.com/)
+    - Used to Compress images for faster loading and to improve Lighthouse score. 
+
+- [Dbdiagram](https://dbdiagram.io/home/)
+    - Used to visualise the database. 
+
+- Unsplash, Pexels, Pxhere, Pixabay
+    - Sources for all images within the site. 
+
+- [ChatGPT](https://chat.openai.com/)
+    - OpenAI's ChatGPT was partially used to provide inspiration for the fictional school names and descriptions. 
+
+---
+
+## Deployment 
+
+---
+
+## Credits
+### School Names/ Descriptions
+
+
+### Code
+
+
+### Bootstrap
+
+
+### Django Documentation
+
+
+## Acknowledgements 
+
+### Code Institute
+- Mentor 
+- Peers
+
+### Anyone else? 
 
