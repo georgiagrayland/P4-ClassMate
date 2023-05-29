@@ -29,7 +29,6 @@ class School(models.Model):
     School model, which stores all information about the schools
     to be displayed on various pages of the website
     """
-    # id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=500, unique=True)
     slug = models.SlugField(max_length=500, unique=True)
     region = models.CharField(max_length=200, choices=region_options)
@@ -67,7 +66,7 @@ class Comment(models.Model):
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['created_on']
