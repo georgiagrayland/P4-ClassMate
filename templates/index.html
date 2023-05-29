@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -34,7 +35,7 @@
 <div class="row card-group pb-3">
     <div class="col-sm-4 mb-3 mb-sm-0 p3">
       <div class="card">
-        <img class="card-img-top" src="../static/media/queen-elizabeth-grammar.jpg" alt="Card image">
+        <img class="card-img-top" src="{% static 'media/queen-elizabeth-grammar.jpg' %}" alt="Card image">
         <div class="card-body">
           <h5 class="card-title home-card">Queen Elizabeth Grammar School</h5>
           <hr>
@@ -46,7 +47,7 @@
     </div>
     <div class="col-sm-4 mb-3 mb-sm-0 p3">
       <div class="card">
-        <img class="card-img-top" src="../static/media/school-3.jpg" alt="Card image">
+        <img class="card-img-top" src="{% static 'media/school-3.jpg' %}" alt="Card image">
         <div class="card-body">
           <h5 class="card-title home-card">Ridgeview Academy</h5>
           <hr>
@@ -58,7 +59,7 @@
     </div>
     <div class="col-sm-4 mb-3 mb-sm-0 p3">
         <div class="card">
-          <img class="card-img-top" src="../static/media/school-1.jpg" alt="Card image">
+          <img class="card-img-top" src="{% static 'media/school-1.jpg' %}" alt="Card image">
           <div class="card-body">
             <h5 class="card-title home-card">Grove College</h5>
             <hr>
