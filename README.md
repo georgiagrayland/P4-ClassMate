@@ -1,108 +1,125 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ClassMate
 
-Welcome georgiagrayland,
+![Amiresponsive image](Link)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Welcome to ClassMate
 
-## Gitpod Reminders
+ClassMate is my my Portfolio Project 4 submission for Code Institute’s Diploma in Full Stack Software Development Course.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The purpose of this project was to build a full-stack site based on user needs and a custom dataset.
 
-`python3 -m http.server`
+ClassMate is a fictional forum website based around fictional schools, allowing users to browse schools in different regions and participate in discussion and comments on each school. 
 
-A blue button should appear to click: _Make Public_,
+ClassMate has been built built using the **Django full-stack framework** and uses a Relational Database. Technologies used are HTML, CSS, JavaScript, and Python. 
 
-Another blue button should appear to click: _Open Browser_.
+This project is entirely for educational purposes only, all information included is fictional and no revenue is generated.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Live Project 
+![View the Live Project Here](Link)
 
 ---
+## UXD - User Experience Design
+ The user was kept in mind through the entire development process of this project, so that experience using the site would be maximised and user needs would be satisfied. 
+ Thus, the planning of the project was constructed of 5 planes, namely, the 5 elements of User Experience Design: 
+- The Strategy Plane
+- The Scope Plane, 
+- The Structure Plane
+- The Skeleton Plane
+- The Surface Plane
 
-Happy coding!
+These planes move from most-least abstract, with each previous one creating an outline for the next. Each plane has required meeting different goals and completing different tasks throughout project development. 
+
+---
+## The Strategy Plane
+### Developer Goals
+- As a site owner, I want the site to be easy to navigate 
+- As a site owner, I want the site to look aesthetically pleasing, accessible, and relevant to the theme of the information.
+- As a site owner, I want to be able to provide some value to users. 
+- As an admin user, I want to be able to Add, Edit, and Delete Schools from the forum.
+- As an admin user, I want to be able to approve or reject comments that have been made by logged in users. 
+
+### User Stories
+#### Regular Site User Stories
+- As a site user, I want to know the purpose of the site upon reaching the first landing page (homepage) so that I do not have to waste time working out what it is for. 
+- As a site user, I want to be able to seamlessly navigate through the site, so that I can view any desired page within the site.
+- As a site user, I want to be able to sign up to the site, so that I can enjoy the additional benefits of having an account. 
+- As a site user, I want to be able to view relevant information easily on all pages, and understand what is displayed on the site, with the use of icons, images, text, and headings. 
+- As a site user, I want to be able to see the posts from other users on relevant pages, so that I can make informed decisions and understand other people’s opinions and experiences. 
+- As a user, I want to be prompted to create an account and know why I should, so that I can enjoy the additional benefits of having one on this sit. 
+- As a user I want to be able to view the footer on any page, and access Social media links directly from here by clicking on the icons, with the Social Media page opening in a new tab. 
+
+#### Active User (Logged In) Stories 
+- As a user with an account, I want to be able to log in easily, viewing a clear clear link to log in on any part of the site (on the Navigation Bar). 
+- As a logged-in user, I want to be able to add comments on any School Detail page, with my username present so that I know who I am posting as. 
+- As a logged-in user, I want to be able to see that my comments have been posted admins and are awaiting approval to be viewed on the site. 
+- As a logged-in user, I want to be able to post multiple comments on an individual School Detail page, so that I can ask questions of other users and gather information I may desire about specific schools. 
+- As a logged-in user, I want to be able to know where I can go to see all of my comments I have made on the site, and be able to access this page easily. 
+- As a logged-in user, I want to be able to see all of my comments on any School on a single page, and from here, have the choice and ability to seamlessly Edit or Delete them. 
+
+---
+## The Scope Plane
+The full range of features I had initially wanted to include in this project were not achievable within the available timeframe for the deadline. Therefore, this project was created in sections, whereby features were incrementally designed and implemented to meet the project requirements and user goals:
+Features Included were implemented using Agile Principles, in this order: 
+
+**Block 1**
+- 
+
+**Block 2**
+- 
+
+**Block 3**
+- 
+
+---
+## The Structure Plane 
+### Color Palette
+
+
+--- 
+## The Skeleton Plane
+
+
+
+---
+## The Surface Plane 
+## Features 
+*Across the project*:
+- All pages of the project are responsive to a wide range of screen sizes.
+- Semantic HTML is used throughout.
+- Custom CSS is blended with Bootstrap 5 to give the site a user-friendly, aesthetic, and intuitive experience. 
+
+**Features Present on all pages**:
+
+### Navigation Bar
+- Navigation Bar is present on all pages of the site. 
+    - It is fully responsive to all possible screen sizes, with a collapsible menu that forms on narrower screen widths.
+- Using the Navigation bar, users can move through the site seamlessly, with clear messaging used on it to where the links will take them.  
+- The ClassMate logo is present on the left, which changes to white when hovered, and when clicked, takes the user back to the homepage, no matter where they are currently in the site. 
+- For all users, there is a link to the page to 'Browse all Schools'.
+    - This link changes color and adds an underline when hovered, for accessibility and ease of use for the user. 
+
+- If a user is not logged in, the navbar will display a button link that says 'SIGNUP/LOGIN'. 
+    - This link changes to a contrasting colour and underlines when hovered. 
+    - When clicked, it takes the user to the 'Sign in' page. Here, they may either Sign in if they have an existing accoutn or there is also a link and message on this page that takes them to the 'singup' page. 
+    ![Image of Not logged in navbar](link)
+
+- If a user is logged in, the navbar will display an additional link, called 'My Activity'. 
+    - This link changes to a contrasting colour and underlines when hovered. 
+    - This will take the user to their 'My comments' page, where they will see the comments they have made and can edit or delete them. 
+ - If the user is logged in, the authentication button will instead display 'Logout'.
+    - When this button is clicked, it takes the user to the confirm logout page.
+    ![Image of logged in user navbar](link)
+
+### Footer 
+- ClassMate logo
+- Short 'about' description
+- Social Media links as icons (open in new tab when clicked)
+
+**Homepage**:
+
+### Header & Introduction Message 
+
+### 
+
