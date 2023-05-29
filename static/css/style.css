@@ -119,7 +119,7 @@ footer i:hover{
 /* --------------------- Schools List Page  --------------------- */
 
 .school-page{
-    background: url(../media/background-schools.jpg);
+    background: url('https://res.cloudinary.com/dhigosr0c/image/upload/v1685302393/static/media/background-schools.e4076597fa44.jpg');
     background-size: cover;
     height: 60vh;
 }
