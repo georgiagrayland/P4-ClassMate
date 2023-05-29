@@ -24,7 +24,7 @@ This project is entirely for educational purposes only, all information included
  The user was kept in mind through the entire development process of this project, so that experience using the site would be maximised and user needs would be satisfied. 
  Thus, the planning of the project was constructed of 5 planes, namely, the 5 elements of User Experience Design: 
 - The Strategy Plane
-- The Scope Plane, 
+- The Scope Plane
 - The Structure Plane
 - The Skeleton Plane
 - The Surface Plane
@@ -60,22 +60,59 @@ These planes move from most-least abstract, with each previous one creating an o
 
 ---
 ## The Scope Plane
-The full range of features I had initially wanted to include in this project were not achievable within the available timeframe for the deadline. Therefore, this project was created in sections, whereby features were incrementally designed and implemented to meet the project requirements and user goals:
-Features Included were implemented using Agile Principles, in this order: 
+In order to achieve the desired user and owner goals, the following features will be included in this version of the site:
+Features included were implemented using **Agile Principles**, in the following order: 
 
 **Block 1**
-- 
+- Landing/Home page with an introduction and a prompt for users to create an account, and an overview of the site's     purpose. 
+- Responsive navigation bar to be present on all pages, so users can move through the site seamlessly.
+- Responsive footer to be present on all pages, with social media links.
 
 **Block 2**
-- 
+- Browse Schools page, allowing users to browse all Schools on the database in a list, so they can compare and contrast key information quickly and easily. 
+- School Detail page, where users can click on a desired school from the browse page. Here they will find all information about this school, including a longer text description. 
+- Login/Sign Up/Log out functionality, where new users can register for an account or users with an existing account can log in or log out when desired.
 
 **Block 3**
-- 
+- Comment section on each School Detail page, where all users can view comments made by others, and logged-in users can add their own comments. 
+- Comment management page for logged-in users, where they can view all comments they have made across the site on one page. 
+-   Comment edit/delete functionality for logged-in users on their 'My Activity' page. 
 
 ---
 ## The Structure Plane 
-### Color Palette
+### Colors
+![Colour Palette](docs/images/color-palette.png)
 
+Colors for this project were selected based on contrast, and adherence to the theme. 
+
+#FDF0D5 is the base body colour, providing a backdrop for all pages. This was chosen due to its similarity to the colour of old book paper, to give the site a book effect. 
+
+#F1D302 is the ClassMate logo colour. This was chosen due to the contrast with the 'Barn Red' Nav bar and footer colour. 
+
+#780000 is the base color for the navbar and footer. This colour was selected as many school uniforms are comprised of this colour, and many schools have this color incorporated into their logo/crest/uniform/books. 
+
+#235789 is the blue color of most of the heading text and icons throughout the site. This was chosen due to its silimarity to blue pen ink, hence fitting the school theme. It also contrasts well with the white background of the cards, and the base body colour. 
+
+#C1292E/White: Most links show Fire Engine Red or white upon hover, for the reason of colour contrast so ease of sight for the user. 
+
+### Typography 
+
+Google fonts were used to style text on this site. 
+
+- Merriweather: 
+    - The font for the ClassMate logo, School Titles, and titles on user authentication and comment management pages. 
+    - This font was chosen as it reflects the School theme, is easily readable, and is relatively heavy so it is obvious what page headings are. 
+
+- Assistant:
+    - All body text including that on cards, descrptions, and comments is in Assistant. 
+    - Assistant is simple and easy to read. 
+
+### Images
+
+Images on the site were selected based on their colour palette, as well as having a mixture of different-looking schools so that the site was varied and a range of users can enjoy the site. 
+All images are responsive to a range of screen sizes. 
+
+*See credits section for more information on image sources.*
 
 --- 
 ## The Skeleton Plane
@@ -90,7 +127,7 @@ Features Included were implemented using Agile Principles, in this order:
 - Semantic HTML is used throughout.
 - Custom CSS is blended with Bootstrap 5 to give the site a user-friendly, aesthetic, and intuitive experience. 
 
-**Features Present on all pages**:
+### Features Present on *all* pages:
 
 ### Navigation Bar
 - Navigation Bar is present on all pages of the site. 
@@ -103,19 +140,24 @@ Features Included were implemented using Agile Principles, in this order:
 - If a user is not logged in, the navbar will display a button link that says 'SIGNUP/LOGIN'. 
     - This link changes to a contrasting colour and underlines when hovered. 
     - When clicked, it takes the user to the 'Sign in' page. Here, they may either Sign in if they have an existing accoutn or there is also a link and message on this page that takes them to the 'singup' page. 
-    ![Image of Not logged in navbar](link)
+
+    ![Regular navbar](docs/images/navbar.png)
 
 - If a user is logged in, the navbar will display an additional link, called 'My Activity'. 
     - This link changes to a contrasting colour and underlines when hovered. 
     - This will take the user to their 'My comments' page, where they will see the comments they have made and can edit or delete them. 
  - If the user is logged in, the authentication button will instead display 'Logout'.
     - When this button is clicked, it takes the user to the confirm logout page.
-    ![Image of logged in user navbar](link)
+
+    ![Logged in user navbar](docs/images/logged-navbar.png)
 
 ### Footer 
+- The Footer is present on all pages of the site 
 - ClassMate logo
 - Short 'about' description
-- Social Media links as icons (open in new tab when clicked)
+- Social Media links as icons, which open in new tab when clicked. This avoids disturbance of user experience.
+
+![Footer](docs/images/footer.png)
 
 **Homepage**:
 
