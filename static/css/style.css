@@ -167,6 +167,14 @@ h6 i{
     text-decoration: underline;
 }
 
+.history{
+    color: white;
+}
+
+.history:hover{
+    color: red;
+}
+
 .school-name{
     font-family: Merriweather, sans-serif;
     color: #235789;
@@ -210,6 +218,19 @@ h6 i{
 
 ul{
     list-style-type: none;
+}
+
+.schools-link{
+    color: #C1121F;
+}
+
+.schools-link:hover{
+    color: #003049;
+}
+
+.my-comments{
+    font-family: Merriweather, sans-serif;
+    color: #235789;
 }
 
 .no-comments{

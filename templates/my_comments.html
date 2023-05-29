@@ -3,6 +3,7 @@
 {% block content %}
 
 <div class="col-md-8 mt-3 offset-md-2">
+    <h3 class="my-comments pb-3">My Comments:</h3>
     {% if comments %}
         {% for comment in comments %}
         <ul>
@@ -17,7 +18,8 @@
         <hr>
         {% endfor %}
     {% else %}
-    <p class="no-comments">You haven't made any comments yet!</p>
+    <p class="no-comments">You haven't made any comments yet <i class="fa-solid fa-triangle-exclamation"></i></p>
+    <a href="{% url 'schools' %}" class="schools-link">View School pages to make comments</a>
     {% endif %}
 </div>
 {% endblock %}
