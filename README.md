@@ -142,7 +142,7 @@ PostgreSql is used for hosting the data on this site.
 ![link to database diagram](docs/images/database.png)
 
 --- 
-## The Skeleton Plane
+## Skeleton
 - The theme of this website follows through in the design. 
 - Bootsrap columns, rows, and cards have been utilised throughout to divide the pages, and maintain the layout throughout the site. 
 - The School theme is present throughout the images, colours, and icons. 
@@ -150,7 +150,7 @@ PostgreSql is used for hosting the data on this site.
 
 
 ---
-## The Surface Plane 
+## Surface
 ## Features 
 *Across the project*:
 - All pages of the project are responsive to a wide range of screen sizes.
@@ -272,7 +272,7 @@ PostgreSql is used for hosting the data on this site.
 - [Font Awesome](https://fontawesome.com/)
 - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)
 
-### Storage& Hosting
+### Storage & Hosting
 - [Heroku]()
 - [GitHub](https://github.com/)
 - [ElephantSQL](https://www.elephantsql.com/)
@@ -296,9 +296,62 @@ PostgreSql is used for hosting the data on this site.
     - OpenAI's ChatGPT was partially used to provide inspiration for the fictional school names and descriptions. 
 
 ---
+## Testing & Validation
+For full details of testing and validation executed, please refer to [TESTING.md](link here)
 
+---
 ## Deployment 
+The live application was deployed to Heroku. 
+*The following instructions show the steps to deploy to Heroku:*
 
+### Heroku Deployment
+1. Create a repository in GitHub.
+2. Open Gitpod from the newly generated repository. 
+3. Install Django, and other relevant/supporting libraries:
+    - In the terminal, enter `pip3 install 'django<4' gunicorn`
+    - In the terminal, enter `pip3 install dj_database_url==0.5.0 psycopg2`
+    - In the terminal, enter `pip3 install dj3-cloudinary-storage`
+
+4. Create requirements.txt file:
+    - In the terminal, enter `pip3 freeze --local > requirements.txt`
+
+5. Create a Django Project:
+    - In the terminal, enter `python3 manage.py startproject 'project_name'` (enter the project name without quotation marks)
+
+6. Create an app:
+    - In the terminal, enter `python3 manage.py startapp 'app_name'` (enter the app name without quotation marks)
+
+7. Add the newly created app into the settings.py file:
+    - Add the app name into the INSATLLED_APPS array and save the file.
+
+8. Migrate the changes:
+    - In the terminal, enter `python3 manage.py migrate`
+
+9. Run the server to verify that Django is upp and running and the skeleton project is present:
+    - In the terminal, enter `python3 manage.py runserver`
+
+10. Create a new app in Heroku:
+    - Create an account or log into existing Heroku account.
+    - Click on 'New' and from the dropdown, select "Create app".
+
+11. Create a database in ElephantSQL:
+    - Create an account or log into existing ElephantSQL account. 
+    - Click on 'Create New Instance'
+    - Give the plan a name (usually the same as the project name), and select 'Tiny Turtle (Free)' plan. 
+    - Click on 'Select Region' & select the data center near you, e.g. 'EU-West-1 (Ireland)', then click 'Review'. 
+    - Ensure details are correct and click 'Create Instance'. 
+    - Return to your ElephantSQL dashboard and click on the databse instance for the name of the project. 
+    - In the URL section, click on the copy icon to copy the databse URL. 
+
+12. Create an env.py file:
+    - In the terminal, enter `touch env.py` to create the env.py file in the root directory of the project. 
+    - Check the .gitignore file to ensure env.py is included. 
+    - In env.py, add `import os` at the top of the file.
+    - In env.py, add a blank line after the import, and then input `os.environ["DATABASE_URL] = "copiedurl"` (enter your copied URL from ElephantSQL here). This will set up the DATABASE_URL variable. 
+    - In env.py add `os.environ[SECRET_KEY] = "any_secret_key"` (enter the secret key here). This will set up the SECRET_KEY variable needed for deployment.
+    - Save the env.py file.
+
+13. Add SQLite database to the .gitignore file. 
 
 ---
 
