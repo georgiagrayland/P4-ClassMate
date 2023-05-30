@@ -78,7 +78,7 @@ Features included were implemented using **Agile Principles**, in the following 
 - Comment management page for logged-in users, where they can view all comments they have made across the site on one page. 
 -   Comment edit/delete functionality for logged-in users on their 'My Activity' page. 
 
-The ClassMate KanBoard (link) was created using GitHub projects, and was used to manage the entire planning and development process.  
+The [ClassMate KanBoard](https://github.com/users/georgiagrayland/projects/3) was created using GitHub projects, and was used to manage the entire planning and development process.  
 
 ---
 ## Structure
