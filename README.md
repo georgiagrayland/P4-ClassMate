@@ -351,7 +351,115 @@ The live application was deployed to Heroku.
     - In env.py add `os.environ[SECRET_KEY] = "any_secret_key"` (enter the secret key here). This will set up the SECRET_KEY variable needed for deployment.
     - Save the env.py file.
 
-13. Add SQLite database to the .gitignore file. 
+13. Add SQLite database to the .gitignore file:
+    - Add `*.sqlite3` to the .gitignore file so that it is not commited and exposed. 
+
+14. Modify the settings.py file: 
+    - In settings.py, import your database from the env.py file:
+    ```
+    import os
+    import dj_database_url
+    if.os.path.isfile('env.py'):
+        import env
+    ```
+    - In the settings.py file, replace the secret key provided automatically by Django with a SECRET_KEY variable:
+    `SECRET_KEY = os.environ.get('SECRET_KEY)`. 
+    - In settings.py, comment out the original DATABASES variable and link your database from the env.py file:
+    ```
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+    ```
+    - Save the settings.py file
+
+15. Migrate Database Structure to the Elephant SQL Database: 
+    - In the terminal, enter `python3 manage.py migrate`.
+    - In that Elephant dashboard, select the database instance name for the project and then select the "Browser" tab on the left. 
+    - Click on 'Table queries' to reveal a dropdown list where you can verify the database structure. 
+
+16. Push Changes to GitHub:
+    - In the terminal, enter:
+        ```
+        git add .
+        git commit -m 'Enter commit message here'
+        git push
+        ```
+
+17. Set up Cloudinary for Static File storage:
+    - Create an account or log in to existing Cloudinary account
+    - In the Cloudinary Dashboard, click 'copy' for the environment API variable.
+    - In the env.py file, add `os.environ[CLOUDINARY_URL] = "cloudinary://'(paste your copied URL here)'"`.
+
+18. Set up Heroku Config Vars:
+    - In the Heroku app dashboard, go to 'Settings'. 
+    - Click 'Reveal Config Vars' and ad the following:
+        - KEY - Enter the database URL from ElephantSQL (same one as in the env.py file)
+        - SECRET_KEY - Enter the secret key you have selected for this project
+        - PORT - 8000
+        - CLOUDINARY_URL - (paste your cloudinary URL from the env.py file)
+        - DISABLE_COLLECSTATIC - 1 (temporarily, this will be removed upon full deployment)
+    
+19. Update settings.py file:
+    - Add Cloudinary libraries into 'INSTALLED_APPS'. 
+    ```
+    INSTALLED_APPS = [
+        ...
+        ....
+        'cloudinary_storage',
+        'django.contrib.staticfiles',
+        'cloudinary',
+        'app_name',
+    ]
+    ```
+    - In settings.py, link Django to the media and static files: 
+    ```
+     STATIC_URL = '/static/'
+    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+    MEDIA_URL = '/media/'
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    ```
+    - In settings.py, add templates to the directory so Django knows where they are stored:
+    `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
+
+    - In settings.py, change the 'DIRS' key to TEMPLATES_DIRS 
+    - In settings.py, add `ALLOWED_HOSTS = ['project_name.herokuapp.com', 'localhost']`. 
+
+20. Create static files for the project:
+    - Create Static, Media, and Templates folders in the root directory.
+
+21. Create Procfile:
+    - Create a file named 'Procfile' in the Root directory. 
+    - Add `web: gunicorn project_name.wsgi`. 
+
+22. Push Changes to GitHub:
+    - In the terminal enter
+    ```
+    git add .
+    git commit -m 'commit message'
+    git push
+    ```
+23. Deploy app in Heroku:
+    - In Heroku, click on the 'Deploy' tab. 
+    - Select 'GitHub' as the deployment method.
+    - Search and select the repository and connect to Heroku. 
+    - Click on 'Deploy Branch' 
+
+### Forking the Repository on GitHub
+To make a copy of the original repository to view or make changes without affecting the original repository: 
+
+1. Log into GitHub and locate the repository
+2. Select the "Fork" option at the top of the screen to create a copy of the repository
+3. This will create a copy of the repository in your GitHub account
+
+### Cloning the Repository on GitHub
+1. In the GitHub repository, select the "Code" button
+2. In the "Clone" box, under the "HTTPS" tab, select the clipboard icon to copy the URL
+3. In Gitpod, change the current working directory to the location you would like the cloned directory to be created
+4. Type "git clone" and then paste the URL copied from GitHub
+5. Press "Enter" and the local clone will be created
 
 ---
 
