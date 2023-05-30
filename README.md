@@ -1,6 +1,6 @@
 # ClassMate
 
-![Amiresponsive image](Link)
+![Amiresponsive image](docs/images/amiresponsive.png)
 
 ## Introduction
 
@@ -242,18 +242,81 @@ PostgreSql is used for hosting the data on this site.
 ---
 ## School Detail Page
 
+- When the School Name is clicked on a card from the 'Browse Schools' page, the user is taken to an individual detail page fr each school. 
+- This includes an image on the left, and key information on the right near the top of the screen. 
+- There is also a 'key numbes' box, which displays information from the schools database such as average GCSE Maths and English Grades. 
+
+![School Detail Page](docs/images/detail-heading.png)
+
+- Under this section, there is a longer description, individual to each school. 
+
+![Description](docs/images/school-detail.png)
+
+- Underneath the description for each school, there is a comment section. 
+    - All users can see any comments already made by others. 
+    - Non-logged in users will see a message asking them to log if if they want to leave a comment.
+
+    ![Non logged in comment form](docs/images/non-loggedin-comment.png)
+
+    - Logged in users will be shown a comment form, with a submit button, where they can leave comments on any individual school. 
+        - Logged-in users can leave multiple comments on a single school, and can leave comments on any school on the site. 
+    
+    ![Logged in Comment form](docs/images/comments-user.png)
+
+    - If a logged in user submits a commentm, they are shown a message displaying they have done this
+
+    ![Submitted comment](docs/images/submitted-comment.png)
 
 ## My Activity Page 
+Logged in users can go to the 'My Activity' page through the Navigation Bar. 
+
+- If users have not yet made any comments from the account they are logged in with, they will see a page telling them this.
+- A link displays prompting them to browse schools to leave comments. 
+
+![No comments](docs/images/no-user-comment.png)
+
+- If the user has left comments on any school, they will be displayed these in a list. 
+- This includes School commented on, date and time of creation of comment, and the body text of the comment. 
+- For each comment, there is an 'Edit Comment' and a 'Delete Comment' button.
+
+![My Commnents](docs/images/my-activity.png)
 
 ## Edit Comment Page
+If a user clicks on the 'Edit Comment' button for any comment, they are taken to this page. 
+- Here they have a text field prepopulated with the existing comment text. They may edit is as they wish. 
+- Here they can click the 'Save' button, and will be redirected back to the 'My Activity' page.
+- The comment will now be edited on this page, and will have been updated on the School Detail page it was made on. 
+
+![Edit Comment](docs/images/edit-comment.png)
 
 ## Delete Comment Page 
+If a user clicks on the 'Delete Comment' button for any comment, they are taken to this page
+- Here there is a message asking to confirm they would like to delete this comment. 
+- If they click 'Delete', they are redirected back to the 'My Activity' page
+- The comment will not be removed from the 'My Activity' page, as well as the School Detail page it was posted on. 
+
+![Delete Comment](docs/images/delete-comment.png)
 
 ## Login Page
+- Login Page is accessed from the Navigatin bar or the Homepage header. 
+- Users can enter their details.
+- If they have not registered yet, there is a message and a link to the sign up page. 
+
+![Log In](docs/images/sign-in.png)
 
 ## Singup Page
+- Signup Page is accessed from the Navigation bar or the Homepage header.
+- Users can submit new details to register for an account. 
+- If users already have an account, there is a message and a link to the login page. 
+
+![Sign up](docs/images/signup.png)
 
 ## Sign Out Page
+- Logout page is accessed from the Navigation bar
+- Users are asked to confirm they would like to sign out. 
+- When sign out button clicked, users are redirected to the homepage and signed out. 
+
+![Sign out](docs/images/logout.png)
 
 ---
 
