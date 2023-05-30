@@ -173,7 +173,60 @@ The Application was checked manually on the following browsers with no compatabi
 
 Testing was carried out according to the user stories on the ClassMate Kanban board, and manual tests were executed along with the **acceptance criteria** for each issue in the Project. 
 
+### USER STORY: Site Navigation
+**As a Site User I can intuitively navigate through the site so that I can view desired content**
+- Acceptance Criteria:
+    1. Each feature has a clear navigation link
+    2. Links to features can be found on the home page
 
+### USER STORY: Informative Landing Page
+**As a Site User I can obtain key information about the site from the landing page so that I can spend less time having to manually search for information**
+- Acceptance Criteria:
+    1. The landing page has a clear message of what the website's key aim is
+    2. The main features of the site are clear from the navigation bar and homepage information
+
+### USER STORY: User is prompted to Create an Account
+**As a Site User I am clearly prompted to register an account so that I can create an account on the site, and enjoy the additional benefits of having a profile to help me make informed decisions about education options.**
+- Acceptance Criteria:
+    1. The landing page has a clear message in relatively large font that prompts users to create an account.
+    2. The navigation bar has a clear 'Sign Up' link.
+    3. The Login page has a message link asking users to create an account if they do not already have one, which takes them to registration page when clicked.
+
+### USER STORY: Admin Login
+**As an Admin User I can log in so that access the backend of the site**
+- Acceptance Criteria:
+    1. Admin users able to log in using the /admin URL with a username and password they have created.
+
+### USER STORY: User Accounts
+**As a Site User I can register or login so that I can participate in discussion on schools by adding comments and asking questions in the comments section**
+- Acceptance Criteria:
+    1. If a user does not have an account they can register for one by using the 'Sign Up' Link on the navigation bar or landing page.
+    2. If a returning user already has an account they can log in by using the link on the navigation bar.
+
+### USER STORY: All Schools have a description, image, and key information displayed for users to view.
+**As a Site User I can easily find the relevant information about each school so that I can gather details I need and make informed decisions about education choices.**
+- Acceptance Criteria:
+    1. All Schools have a name, basic details and image on listings page.
+    2. All Schools have a more detailed description, further key details on class size, sports, age groups, status and specialisation on each 'School Detail' page. 
+
+### USER STORY: View Each School on a Separate Page 
+**As a Site User I can view details of each school on an individual page so that I can learn more about each one, see a written description, and view comments that other users have left about each school.**
+- Acceptance Criteria:
+    1. There is a clear text link and button on the listings page that takes the user to the 'School Detail' page of each individual school page when clicked.
+    2. On each school detail page there is additional information to the listings page, as well as a comment section.
+
+### USER STORY: Users Can comment on a School Page 
+**As a logged-in Site User I can add a comment about a specific school so that I can participate in discussion on this school, to either add my experience/opinion or ask questions to other users who visit the page to make more informed decisions about education options.**
+- Acceptance Criteria:
+    1. On a 'School Detail' page users can write and submit comments in a clearly marked comment form on to be displayed on the page if approved.
+    2. Users may write anything in the comment text field, whether it be their own opinion/experience of the School page they are on or questions to other visitors of the page.
+
+### USER STORY: CRUD Functionality of Users' Comments
+**As a logged in site user I can create, read, update, and delete comments I have made on schools so that I can ensure information I have posted on the site is correct, appropriate, and reflects what I want to convey.**
+- Acceptance Criteria:
+    1. Logged in users can write and post comments on individual 'school detail' pages.
+    2. They can edit existing comments they have posted.
+    3. They can delete existing comments they have made.
 
 --- 
 
