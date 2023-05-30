@@ -66,41 +66,74 @@ JavaScript code used in the application was validated using [JSHint](https://jsh
 
 ### Python
 Python code was validated using the [CI Python Linter](https://pep8ci.herokuapp.com/#).
-- No issues or errors were found on **Website App** pages: 
+
+---
+No issues or errors were found on **Website App** pages: 
 
 <details>
 <summary>views.py - No issues or errors</summary>
 <br>
 
-![views]()
+![views](docs/images/views.png)
 </details>
 <details>
 <summary>urls.py - No issues or errors</summary>
 <br>
 
-![urls]()
+![urls](docs/images/urls.png)
 </details>
 <details>
 <summary>models.py - No issues or errors</summary>
 <br>
 
-![models.py]()
+![models.py](docs/images/urls.png)
 </details>
 <details>
 <summary>forms.py - No issues or errors</summary>
 <br>
 
-![forms.py]()
+![forms.py](docs/images/forms.png)
 </details>
 <details>
 <summary>apps.py - No issues or errors</summary>
 <br>
 
-![apps.py]()
+![apps.py](docs/images/apps.png)
 </details>
 <details>
 <summary>admin.py - No issues or errors</summary>
 <br>
 
-![admin.py]()
+![admin.py](docs/images/admin.png)
+</details>
+
+--- 
+
+In the **ClassMate Project**, some Django-generated codes caused 'line too long' errors. 
+- These were kept in, due to the necessuity of maintatining these lines of code for app functionality, and deployment. 
+    - Specifically, the 'line too long' error was present in settings.py, for linking Cloudinary Storage. This cannot be shortened as it would lose the code functionality. 
+
+<summary>settings.py - Line too Long Errors due to Cloudinary Storage</summary>
+<br>
+
+![settings.py]()
+</details>
+
+
+- All other pages had no Python errors: 
+
+<summary>urls.py - No issues or errors</summary>
+<br>
+
+![classmate-urls.py]()
+</details>
+<summary>asgi.py - No issues or errors</summary>
+<br>
+
+![asgi.py]()
+</details>
+<summary>wasgi.py - No issues or errors</summary>
+<br>
+
+![wsgi.py]()
 </details>
