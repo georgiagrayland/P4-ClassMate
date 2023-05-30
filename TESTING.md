@@ -364,6 +364,7 @@ Feature | Action | Expected Result | PASS/FAIL
 ---|---|---|---
 Text Input | Display | Textarea is prepopulated with comment user wishes to edit | PASS
 Text Input | Type | User can edit the text in the input form | PASS
+Text Input | Type | User cannot save blank form | PASS
 Save Button | Click | Navigates users back to to 'my comments' page | PASS
 Save Button | Click | Comment is now change on the My Comments page | PASS
 Save Button | Click | Comment is now changed on relevant page it was made | PASS
@@ -376,7 +377,11 @@ Delete Button | Click | Comment is now deleted from My comments page  | PASS
 Delete Button | Click | Comment is now deleted from page it was made | PASS
 Delete Button | Click | Navigates user back to My Activity page | PASS
 
-## Input Validation
+
+## Known Issues
+- The Comment form on each 'School Detail' page contains a body* tag above the textarea input.
+    - This is due to the use of Crispy Forms to render the form.
+    - It has been kept in the project as it does not affect functionality. 
+    - In further developments of this project it could be taken out. 
 
 
-## Unresolved Bugs / Issues 
