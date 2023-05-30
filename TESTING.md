@@ -42,7 +42,11 @@ Please see below for the results of each page in the site:
 <details>
 <summary>School Detail Page - Errors due to Summernote/Crispy Forms</summary>
 <br>
-Talk about errors here 
+    - These pages identifed a stray end 'form' tag. This is due to the opening tag of Crispy Forms not being identified as HTML in the browser.
+    - There is also a stray 'p' end tag in scope, and this is due to Summernote rendering some HTML tags itself in the Django Admin backend.
+
+    *These errors were kept in as they do not affect the functionality of the project, and are part of the imported external libraries.*
+
 
 ![Logout Validation](docs/images/nu-school-detail.png)
 </details>
@@ -110,30 +114,70 @@ No issues or errors were found on **Website App** pages:
 --- 
 
 In the **ClassMate Project**, some Django-generated codes caused 'line too long' errors. 
-- These were kept in, due to the necessuity of maintatining these lines of code for app functionality, and deployment. 
+- These were kept in, due to the necessity of maintatining these lines of code for app functionality, and deployment. 
     - Specifically, the 'line too long' error was present in settings.py, for linking Cloudinary Storage. This cannot be shortened as it would lose the code functionality. 
 
+<details>
 <summary>settings.py - Line too Long Errors due to Cloudinary Storage</summary>
 <br>
 
-![settings.py]()
+![settings.py](docs/images/settings.png)
 </details>
 
 
 - All other pages had no Python errors: 
 
+<details>
 <summary>urls.py - No issues or errors</summary>
 <br>
 
-![classmate-urls.py]()
+![classmate-urls.py](docs/images/classmate-urls.png)
 </details>
+<details>
 <summary>asgi.py - No issues or errors</summary>
 <br>
 
-![asgi.py]()
+![asgi.py](docs/images/asgi.png)
 </details>
+<details>
 <summary>wasgi.py - No issues or errors</summary>
 <br>
 
-![wsgi.py]()
+![wsgi.py](docs/images/wsgi.png)
 </details>
+
+---
+
+## Acessibility
+### Lighthouse Score
+
+
+## Responsiveness 
+- Chrome Dev tools responsive viewer was used to test the responsiveness of **all** pages of the site: 
+- A wide variety of devices and screen sizes were tested: 
+(images here)
+
+*The application was also tested manually a range of devices including: iPhone 14, iPhone 11, MacBook Air, iPad 3,*
+
+### Browsers
+The Application was checked manually on the following browsers with no compatability issues:
+- Google Chrome
+- Apple Safari
+- Mozilla Firefox
+- Opera 
+
+---
+# Testing
+
+## User Stories Testing
+
+- talk about Kanban board & how acceptance critera were used
+
+
+## Manual Testing
+
+
+## Input Validation
+
+
+## Unresolved Bugs / Issues 
