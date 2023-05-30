@@ -113,7 +113,7 @@ No issues or errors were found on **Website App** pages:
 
 --- 
 
-In the **ClassMate Project**, some Django-generated codes caused 'line too long' errors. 
+In the **ClassMate Project**, some Django code caused 'line too long' errors. 
 - These were kept in, due to the necessity of maintatining these lines of code for app functionality, and deployment. 
     - Specifically, the 'line too long' error was present in settings.py, for linking Cloudinary Storage. This cannot be shortened as it would lose the code functionality. 
 
@@ -140,7 +140,7 @@ In the **ClassMate Project**, some Django-generated codes caused 'line too long'
 ![asgi.py](docs/images/asgi.png)
 </details>
 <details>
-<summary>wasgi.py - No issues or errors</summary>
+<summary>wsgi.py - No issues or errors</summary>
 <br>
 
 ![wsgi.py](docs/images/wsgi.png)
@@ -153,7 +153,7 @@ In the **ClassMate Project**, some Django-generated codes caused 'line too long'
 
 
 ## Responsiveness 
-- Chrome Dev tools responsive viewer was used to test the responsiveness of **all** pages of the site: 
+- Chrome Developer tools responsive viewer was used to test the responsiveness of **all** pages of the site: 
 - A wide variety of devices and screen sizes were tested: 
 (images here)
 

@@ -10,7 +10,7 @@ ClassMate is my my Portfolio Project 4 submission for Code Institute’s Diploma
 
 The purpose of this project was to build a full-stack site based on user needs and a custom dataset.
 
-ClassMate is a fictional forum website based around fictional schools, allowing users to browse schools in different regions and participate in discussion and comments on each school. 
+ClassMate is a forum website based around fictional schools, allowing users to browse schools in different regions and participate in discussion and comment on each school. 
 
 ClassMate has been built built using the **Django full-stack framework** and uses a Relational Database. Technologies used are HTML, CSS, JavaScript, and Python. 
 
