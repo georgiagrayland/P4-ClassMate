@@ -17,7 +17,7 @@ ClassMate has been built built using the **Django full-stack framework** and use
 This project is entirely for educational purposes only, all information included is fictional and no revenue is generated.
 
 ## Live Project 
-![View the Live Project Here](Link)
+[View the Live Project Here](Link)
 
 ---
 ## UXD - User Experience Design
@@ -60,6 +60,9 @@ These planes move from most-least abstract, with each previous one creating an o
 
 ---
 ## Scope
+
+The [ClassMate Kanban Board](https://github.com/users/georgiagrayland/projects/3) was created using GitHub projects, and was used to manage the entire planning and development process.  
+
 In order to achieve the desired user and owner goals, the following features will be included in this version of the site:
 Features included were implemented using **Agile Principles**, in the following order: 
 
@@ -77,8 +80,6 @@ Features included were implemented using **Agile Principles**, in the following 
 - Comment section on each School Detail page, where all users can view comments made by others, and logged-in users can add their own comments. 
 - Comment management page for logged-in users, where they can view all comments they have made across the site on one page. 
 -   Comment edit/delete functionality for logged-in users on their 'My Activity' page. 
-
-The [ClassMate KanBoard](https://github.com/users/georgiagrayland/projects/3) was created using GitHub projects, and was used to manage the entire planning and development process.  
 
 ---
 ## Structure
@@ -130,16 +131,16 @@ PostgreSql is used for hosting the data on this site.
 ### Comment 
 - The comment model allows (logged-in) to leave comments on individual school pages. 
 - It is connected to the School model, via the School name. 
-- It is also connected to users through each comment id. 
+- It is also connected to users through each comment id, and author's username. 
 - It allows users to leave their username and timestamp on comments for their own reference. 
-- The Comment model has full Create, Read, Update, Delete (CRUD) functionality on the front-end. 
+- The Comment model has **full Create, Read, Update, Delete (CRUD) functionality on the front-end.**
 
 ### User (Django Allauth)
-- The User database was automatically created upon installation of Djang-allauth. 
+- The User database was automatically created upon installation of Django-allauth. 
 - This is for users to log in, sign up, log out, and leave comments on School Pages. 
 - It is linked to the comment model, through the user id. 
 
-![link to database diagram](docs/images/database.png)
+![Database diagram](docs/images/database.png)
 
 --- 
 ## Skeleton
