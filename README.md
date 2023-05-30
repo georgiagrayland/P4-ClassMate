@@ -297,7 +297,7 @@ PostgreSql is used for hosting the data on this site.
 
 ---
 ## Testing & Validation
-For full details of testing and validation executed, please refer to [TESTING.md](link here)
+For full details of testing and validation executed, please refer to [TESTING.md](TESTING.md)
 
 ---
 ## Deployment 
