@@ -32,7 +32,7 @@ This project is entirely for educational purposes only, all information included
 These planes move from most-least abstract, with each previous one creating an outline for the next. Each plane has required meeting different goals and completing different tasks throughout project development. 
 
 ---
-## The Strategy Plane
+## Strategy
 ### Developer Goals
 - As a site owner, I want the site to be easy to navigate 
 - As a site owner, I want the site to look aesthetically pleasing, accessible, and relevant to the theme of the information.
@@ -59,7 +59,7 @@ These planes move from most-least abstract, with each previous one creating an o
 - As a logged-in user, I want to be able to see all of my comments on any School on a single page, and from here, have the choice and ability to seamlessly Edit or Delete them. 
 
 ---
-## The Scope Plane
+## Scope
 In order to achieve the desired user and owner goals, the following features will be included in this version of the site:
 Features included were implemented using **Agile Principles**, in the following order: 
 
@@ -78,10 +78,13 @@ Features included were implemented using **Agile Principles**, in the following 
 - Comment management page for logged-in users, where they can view all comments they have made across the site on one page. 
 -   Comment edit/delete functionality for logged-in users on their 'My Activity' page. 
 
+The ClassMate KanBoard (link) was created using GitHub projects, and was used to manage the entire planning and development process.  
+
 ---
-## The Structure Plane 
+## Structure
 ### Colors
 ![Colour Palette](docs/images/color-palette.png)
+Color Palette Generated Using [Coolors](https://coolors.co/)
 
 Colors for this project were selected based on contrast, and adherence to the theme. 
 
@@ -131,8 +134,12 @@ PostgreSql is used for hosting the data on this site.
 - It allows users to leave their username and timestamp on comments for their own reference. 
 - The Comment model has full Create, Read, Update, Delete (CRUD) functionality on the front-end. 
 
+### User (Django Allauth)
+- The User database was automatically created upon installation of Djang-allauth. 
+- This is for users to log in, sign up, log out, and leave comments on School Pages. 
+- It is linked to the comment model, through the user id. 
 
-[link to database diagram](Database Diagram)
+![link to database diagram](docs/images/database.png)
 
 --- 
 ## The Skeleton Plane
@@ -267,9 +274,9 @@ PostgreSql is used for hosting the data on this site.
 
 ### Storage& Hosting
 - [Heroku]()
-- [GitHub]()
-- [ElephantSQL]()
-- [Cloudinary]()
+- [GitHub](https://github.com/)
+- [ElephantSQL](https://www.elephantsql.com/)
+- [Cloudinary](https://cloudinary.com/)
 
 ### IDE & Version Control
 - Git
@@ -285,9 +292,6 @@ PostgreSql is used for hosting the data on this site.
 - [Dbdiagram](https://dbdiagram.io/home/)
     - Used to visualise the database. 
 
-- Unsplash, Pexels, Pxhere, Pixabay
-    - Sources for all images within the site. 
-
 - [ChatGPT](https://chat.openai.com/)
     - OpenAI's ChatGPT was partially used to provide inspiration for the fictional school names and descriptions. 
 
@@ -295,26 +299,41 @@ PostgreSql is used for hosting the data on this site.
 
 ## Deployment 
 
+
 ---
 
 ## Credits
 ### School Names/ Descriptions
+- Inspiration for many of the fictional school names and descriptions was helped by Chat GPT. 
+    - This was to ensure all information was completely fictional, an no bias of real information from myself as the developer would be present in the site. 
 
+### Images 
+- All images on the site were sourced from:
+    - [Unsplash](https://unsplash.com/)
+    - [Pexels](https://www.pexels.com/)
+    - [Pixabay](https://pixabay.com/)
 
 ### Code
-
+- Parts of the code, and base inspiration for other parts, was taken from the Code Institute 'Django Blog' walkthrough project. 
+- [Code Institute Codestar Blog Project](link)
+    - 'Codestar Blog' is a walkthrough project by Code Institute. This project is designed to give students an introduction to the Django Framework, PostgreSQL, and using relational databases. 
+    - Parts of the core functionality were adopted from this project, including the 'Comment' model. 
 
 ### Bootstrap
-
+- The [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) library (version 5.3) is used across this project, and is present on all pages. 
+- This was used for page layout, in order to create an intuitive, aesthetic, and pleasing experience for site users. 
+    - The Navigation bar, cards, forms, and buttons all all Bootstrap components that have been adoapted and built apon for this project. 
 
 ### Django Documentation
+- The official [Django Documentation](https://docs.djangoproject.com/en/4.2/) was utilised throughout the development of this project.
+    - Explanations of Django concepts such as creating views and urls were very helpful.
 
-
+---
 ## Acknowledgements 
 
 ### Code Institute
-- Mentor 
-- Peers
+- **Harry Dhillon**, my mentor at Code Institute, has been incredibly helpful and insightful throughout the development of this project. 
+   - Has provided me with suggestions, advice, and encouragement, as well as helping me stay on track to meet the tight deadline of this project. 
+- The tutors at Code Institute, who were very helpful and always available to offer solutions for issues and providing strategies to achieve my desired fucntionality for this project. 
 
-### Anyone else? 
-
+- My peers at Code Institute, who have provided valuable feedback, and solutions to PEP8 errors I have come across during the development of this project.
