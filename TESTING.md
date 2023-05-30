@@ -149,13 +149,19 @@ In the **ClassMate Project**, some Django code caused 'line too long' errors.
 ---
 
 ## Acessibility
+
 ### Lighthouse Score
 
 
 ## Responsiveness 
-- Chrome Developer tools responsive viewer was used to test the responsiveness of **all** pages of the site: 
-- A wide variety of devices and screen sizes were tested: 
-(images here)
+- Chrome Developer tools responsive viewer was used to test the responsiveness of *all pages* of the site: 
+- A wide variety of devices and screen sizes were tested.
+Examples can be seen here:
+
+![Screens](docs/images/responsiveness-1.png)
+
+![Screens](docs/images/responsiveness-2.png)
+
 
 *The application was also tested manually a range of devices including: iPhone 14, iPhone 11, MacBook Air, iPad 3,*
 
@@ -179,9 +185,9 @@ Testing was carried out according to the user stories on the ClassMate Kanban bo
     1. Each feature has a clear navigation link
     2. Links to features can be found on the home page
 
-Navigation bar has clearly marked links with CSS hover. And additional link found on homepage header in welcome message. 
+Navigation bar has clearly marked links with CSS contrasted color hover. And additional link found on homepage header in welcome message. 
 Navigation bar present on all site pages. 
-![Nav bar and header]()
+![Nav bar and header](docs/images/nav-header.png)
 
 ### USER STORY: Informative Landing Page
 **As a *Site User* I can obtain key information about the site from the landing page so that I can spend less time having to manually search for information**
@@ -191,7 +197,7 @@ Navigation bar present on all site pages.
 
 Message to users on homepage header, and concise but useful description of what the purpose of the site is as initial landing message. 
 
-![Homepage]()
+![Homepage](docs/images/homepage.png)
 
 
 ### USER STORY: User is prompted to Create an Account
@@ -208,13 +214,6 @@ Hence the user is incentivised to create an account.
 
 ![comment form](docs/images/non-loggedin-comment.png)
 
-
-### USER STORY: Admin Login
-**As an *Admin User* I can log in so that access the backend of the site**
-- Acceptance Criteria:
-    1. Admin users able to log in using the /admin URL with a username and password they have created.
-
-![Admin]()
 
 ### USER STORY: User Accounts
 **As a *Site User* I can register or login so that I can participate in discussion on schools by adding comments and asking questions in the comments section**
@@ -242,10 +241,9 @@ All User authentication pages are functional and clearly found throughout the we
     1. All Schools have a name, basic details and image on listings page.
     2. All Schools have a more detailed description, further key details on class size, sports, age groups, status and specialisation on each 'School Detail' page. 
 
-All Schools are shown in one place on the 'Browse schools' page with key information displayed.
+All Schools are shown in one place on the 'Browse schools' page with key information displayed, for users to Browse and compare easily. 
 
-
-![Browse](docs/images/list-card.png)
+![Browse](docs/images/browse-page.png)
 
 ### USER STORY: View Each School on a Separate Page 
 **As a *Site User* I can view details of each school on an individual page so that I can learn more about each one, see a written description, and view comments that other users have left about each school.**
@@ -255,7 +253,7 @@ All Schools are shown in one place on the 'Browse schools' page with key informa
 
 All Schools can be viewed on individual, more detailed pages through clicking the School Name links on the 'Browse School' page 
 
-![Detail](DETAIL PAge)
+![Detail](docs/images/detail-page.png)
 
 
 ### USER STORY: Users Can comment on a School Page 
@@ -293,9 +291,7 @@ All Schools can be viewed on individual, more detailed pages through clicking th
 
 --- 
 
-## Manual Testing
-
-## Features Testing 
+## Manual Features Testing 
 Manual testing was performed using Google Chrome to verify that all features function as expected and no issues occur. 
 
 ### Navigation Bar 
