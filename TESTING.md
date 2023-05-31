@@ -162,9 +162,20 @@ In the **ClassMate Project**, some Django code caused 'line too long' errors.
 
 ---
 
-## Acessibility
+### Acessibility
+Lighthouse Accesibility Scores on all pages ranged from 94-100. 
 
-### Lighthouse Score
+### SEO
+Lighthouse SEO scores on all pages ranged from 91-100%.
+
+### Best Practices
+Lighthouse Best Practice Scores across all pages was 100%. 
+
+### Performance
+Lighthouse Performance Scores ranged from 75-100% across pages. 
+This is due to the nature of the images on the website, and the fact they are displayed on cards. 
+No part of the website is compromised visually due to the images. 
+The 'Browse Schools' page has a slightly longer load time due to the amount of quality images on this page.  
 
 
 ## Responsiveness 
