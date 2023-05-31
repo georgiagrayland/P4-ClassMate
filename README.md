@@ -51,12 +51,13 @@ These planes move from most-least abstract, with each previous one creating an o
 - As a user I want to be able to view the footer on any page, and access Social media links directly from here by clicking on the icons, with the Social Media page opening in a new tab. 
 
 #### Active User (Logged In) Stories 
-- As a user with an account, I want to be able to log in easily, viewing a clear clear link to log in on any part of the site (on the Navigation Bar). 
+- As a user with an account, I want to be able to log in easily, viewing a clear link to log in on any part of the site (on the Navigation Bar). 
 - As a logged-in user, I want to be able to add comments on any School Detail page, with my username present so that I know who I am posting as. 
-- As a logged-in user, I want to be able to see that my comments have been posted admins and are awaiting approval to be viewed on the site. 
+- As a logged-in user, I want to be able to see that my comments have been posted on the page I have written them on. 
 - As a logged-in user, I want to be able to post multiple comments on an individual School Detail page, so that I can ask questions of other users and gather information I may desire about specific schools. 
 - As a logged-in user, I want to be able to know where I can go to see all of my comments I have made on the site, and be able to access this page easily. 
 - As a logged-in user, I want to be able to see all of my comments on any School on a single page, and from here, have the choice and ability to seamlessly Edit or Delete them. 
+- As a logged in user, I want to be able to go to the logout page from anywhere in the site. 
 
 ---
 ## Scope
