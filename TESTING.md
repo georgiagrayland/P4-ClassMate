@@ -63,15 +63,29 @@ Please see below for the results of each page in the site:
 ![Delete Comment Validation](docs/images/nu-delete-comment.png)
 </details>
 
+
+### CSS 
+Style Sheets were validated using the W3C CSS Validator. 
+
+<details>
+<summary>Style Sheets - No Issues or Errors</summary>
+<br>
+
+![CSS Validation](docs/images/css-validation.png)
+</details>
+
+---
 ### JavaScript
 JavaScript code used in the application was validated using [JSHint](https://jshint.com/)
 - No issues or errors were raised when running through the JavaScript Validator
 - No errors present in the console. 
 
+---
+
 ### Python
 Python code was validated using the [CI Python Linter](https://pep8ci.herokuapp.com/#).
 
----
+
 No issues or errors were found on **Website App** pages: 
 
 <details>
