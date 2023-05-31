@@ -17,7 +17,7 @@ ClassMate has been built built using the **Django full-stack framework** and use
 This project is entirely for educational purposes only, all information included is fictional and no revenue is generated.
 
 ## Live Project 
-[View the Live Project Here](Link)
+[View the Live Project Here](https://class-mate.herokuapp.com/)
 
 ---
 ## UXD - User Experience Design
