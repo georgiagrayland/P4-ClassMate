@@ -38,7 +38,7 @@ These planes move from most-least abstract, with each previous one creating an o
 - As a site owner, I want the site to look aesthetically pleasing, accessible, and relevant to the theme of the information.
 - As a site owner, I want to be able to provide some value to users. 
 - As an admin user, I want to be able to Add, Edit, and Delete Schools from the forum.
-- As an admin user, I want to be able to approve or reject comments that have been made by logged in users. 
+- As an admin user, I want to be able to see all comments made across the site in one place. 
 
 ### User Stories
 #### Regular Site User Stories
