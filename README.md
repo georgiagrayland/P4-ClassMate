@@ -540,9 +540,10 @@ To make a copy of the original repository to view or make changes without affect
 
 ### Code
 - Parts of the code, and base inspiration for other parts, was taken from the Code Institute 'Django Blog' walkthrough project. 
-- [Code Institute Codestar Blog Project](link)
+- [Code Institute Codestar Blog Project](https://github.com/Code-Institute-Solutions/Django3blog/tree/master)
     - 'Codestar Blog' is a walkthrough project by Code Institute. This project is designed to give students an introduction to the Django Framework, PostgreSQL, and using relational databases. 
-    - Parts of the core functionality were adopted from this project, including the 'Comment' model. 
+    - Parts of the core functionality were adopted from this project. 
+    - The 'Comment' model has been taken from this project. 
 
 ### Bootstrap
 - The [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) library (version 5.3) is used across this project, and is present on all pages. 
